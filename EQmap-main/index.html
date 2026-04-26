@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>地震マップv2.1.9</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<style>
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+  
+#map {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+  .intensity-marker {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    width:32px;
+    height:32px;
+    font-weight:bold;
+    font-size:14px;
+    border:2px solid rgba(0,0,0,0.2);
+    box-sizing:border-box;
+    pointer-events:none;
+  }
+  #loading {
+    position:absolute;
+    top:30px;
+    left:50%;
+    transform:translateX(-50%);
+    background:white;
+    padding:5px 10px;
+    border:1px solid black;
+    z-index:100000;
+    font-weight:bold;
+    font-family:"Yu Gothic","YuGothic","メイリオ",sans-serif;
+  }
+  #hypo-info {
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:rgba(255,255,255,0.9);
+    padding:8px 12px;
+    border:1px solid black;
+    font-family:"Yu Gothic","YuGothic","メイリオ",sans-serif;
+    z-index:100000;
+    font-weight:bold;
+    cursor:move;
+    line-height:1.1;
+  }
+  #max-intensity {
+    min-width:80px;
+    border:1px solid black;
+    text-align:center;
+    font-family:"Yu Gothic","YuGothic","メイリオ",sans-serif;
+    position:absolute;
+    left:10px;
+    z-index:100000;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:3px 10px;
+    box-sizing:border-box;
+    border-radius:0;
+  }
+  #max-intensity .label {
+    font-size:0.85em;
+    font-weight:normal;
+    margin-bottom:1px;
+    width:100%;
+    box-sizing:border-box;
+  }
+  #max-intensity .scale {
+    font-size:2.2em;
+    font-weight:bold;
+    line-height:1;
+    margin:0;
+    padding:0;
+    height:auto;
+    width:auto;
+    box-sizing:border-box;
+  }
+  #help-checkbox-container {
+    margin-top: 10px;
+    font-size: 0.9em;
+    text-align: left;
+  }
+  #help-checkbox-container input[type="checkbox"] {
+    margin-right: 5px;
+  }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div id="loading">読み込み中…</div>
+<div id="hypo-info"></div>
+<div id="max-intensity">
+  <div class="label">最大震度</div>
+  <div class="scale">--</div>
+</div>
+<div id="minimap" style="width:150px;height:200px;position:absolute;bottom:20px;right:20px;z-index:99999;border:3px solid black;background:white;display:none;"></div>
+
+<!-- ヘルプボタン -->
+<div id="help-button">？</div>
+
+<!-- ポップアップ -->
+<div id="help-popup">
+  <div class="popup-content">
+    <span id="popup-close">&times;</span>
+<div id="help-checkbox-container">
+  <label>
+    <input type="checkbox" id="show-minimap-checkbox">
+    表示範囲を示す<br>
+  </label>
+  <label>幅(px): <input type="number" id="minimap-width" value="150"></label><br>
+  <label>高さ(px): <input type="number" id="minimap-height" value="200"></label><br>
+  <button id="update-minimap-size">更新</button>
+</div>
+<p><b>地震マップ</b><br>
+各地の震度アイコンを押すと、<br>観測点名のポップアップを表示します。<br>
+P2P地震情報APIの更新状況により、<br>タイムラグが生じる場合があります。<br>
+情報を更新するにはリロードしてください。<br>
+バグや意見があれば報告お願いします<br>
+＝　＝　＝<br>
+【情報源】<br><a href="https://www.p2pquake.net/develop/json_api_v2/" target="_brank">P2P地震情報API</a><br>
+座標データは<a href="https://gist.github.com/iku55/79005d1896631ad6117bbe327b8162c1" target="_blank">iku55</a>様のjsonを使用<br>
+【地図】<br>(c)<a href="https://carto.com/" target="_blank">CARTO</a><br>
+【制作】<br>NAFY/なふぃー　ChatGPT<br>
+GitHub Pages
+</p>
+
+
+<style>
+  /* ヘルプボタン */
+  #help-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background: #0078ff;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 100000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    font-family: "Hiragino Maru Gothic ProN", "Rounded Mplus 1c", "Yu Gothic", "Meiryo", sans-serif;
+  }
+
+  /* ポップアップ本体 */
+  #help-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 100001;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popup-content {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    position: relative;
+    max-width: 400px;
+    width: 80%;
+    max-height: 70vh;       /* 高さ制限（画面の70%まで） */
+    overflow-y: auto;       /* 縦スクロール有効 */
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    font-family: "Yu Gothic","メイリオ",sans-serif;
+  }
+
+  /* 閉じるボタン */
+  #popup-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+  }
+</style>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+// ==================== 地震マップβ版 最終完全版 ====================
+
+// メイン地図の初期化
+const map = L.map('map').setView([37.5, 138], 5);
+function resizeMap() {
+  map.invalidateSize();
+}
+
+window.addEventListener('resize', resizeMap);
+window.addEventListener('orientationchange', () => {
+  setTimeout(resizeMap, 300);
+});
+  
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; CARTO',
+  subdomains: 'abcd',
+  maxZoom: 19
+}).addTo(map);
+
+// 親要素のサイズに合わせて再描画
+setTimeout(() => {
+  map.invalidateSize();
+}, 100);
+
+map.createPane('hypocenterPane');
+map.getPane('hypocenterPane').style.zIndex = 10000;
+
+// 震度ごとの色設定（そのまま）
+const colors = {"1":"#f2f2ff","2":"#00aaff","3":"#0041ff","4":"#fae696",
+                "5-":"#ffe600","5+":"#ff9900","6-":"#ff2800","6+":"#a50021","7":"#b40068"};
+const textColors = {"1":"#000","2":"#fff","3":"#fff","4":"#000",
+                    "5-":"#000","5+":"#000","6-":"#fff","6+":"#fff","7":"#fff"};
+const intensityOrder = {"1":1,"2":2,"3":3,"4":4,"5-":5,"5+":6,"6-":7,"6+":8,"7":9};
+const p2pToShindo = {10:"1",20:"2",30:"3",40:"4",45:"5-",50:"5+",55:"6-",60:"6+",70:"7"};
+
+function getTextColor(rgb){
+  const [r,g,b] = rgb.match(/\d+/g).map(Number);
+  return (r*299 + g*587 + b*114)/1000 > 128 ? "black" : "white";
+}
+
+function addIntensityMarker(lat, lon, intensity, popupText){
+  const color = colors[intensity] || "gray";
+  const textColor = textColors[intensity] || getTextColor(color);
+  const icon = L.divIcon({
+    className: '',
+    html: `<div class="intensity-marker" style="background:${color};color:${textColor}">${intensity}</div>`,
+    iconSize: [24,24],
+    iconAnchor: [12,12]
+  });
+  const marker = L.marker([lat,lon], {
+    icon: icon,
+    interactive: true,
+    zIndexOffset: (intensityOrder[intensity]||0)*1000
+  }).addTo(map);
+  if(popupText) marker.bindPopup(popupText);
+}
+
+function updateMaxIntensityPosition(){
+  const hypoInfoEl = document.getElementById('hypo-info');
+  const maxIntensityEl = document.getElementById('max-intensity');
+  const rect = hypoInfoEl.getBoundingClientRect();
+  maxIntensityEl.style.top = (rect.bottom + 5) + 'px';
+}
+
+function buildTsunamiText(domestic, foreign){
+  const d = domestic || "Unknown";
+  const f = foreign || "";
+  if(d==="Warning" || d==="Watch") return "津波情報を発表中";
+  if(d==="NonEffective") return "若干の海面変動あり";
+  if(d==="None"){
+    if(f==="Warning" || f==="Watch" || f==="WarningNearby") return "国内では津波の心配なし";
+    return "津波の心配なし";
+  }
+  if(d==="Checking") return "津波の有無を調査中";
+  if(d==="Unknown") return "津波の有無は不明";
+  return "津波の有無は不明";
+}
+
+async function loadCoordMap() {
+  const res = await fetch('./coords.json');
+  if (!res.ok) throw new Error('coords.json が読めません');
+  const arr = await res.json();
+
+  const map = {};
+  arr.forEach(p => {
+    map[p.name] = {
+      lat: Number(p.lat),
+      lon: Number(p.lon),
+      affi: p.affi,
+      pref: p.pref?.name
+    };
+  });
+
+  return map;
+}
+async function loadAreaMap() {
+  const res = await fetch('./coords.json');
+  if (!res.ok) throw new Error('coords.json が読めません');
+  const arr = await res.json();
+
+  const areaMap = {}; // 地方名 → { areaCode }
+
+  arr.forEach(p => {
+    if (p.area?.name && !areaMap[p.area.name]) {
+      areaMap[p.area.name] = { areaCode: p.area.code };
+    }
+  });
+
+  return areaMap;
+}
+  
+// ==================== 地震情報取得（そのまま）===================
+(async () => {
+try {
+    const res = await fetch("https://api.p2pquake.net/v2/history?codes=551&limit=5");
+    //const res = await fetch("https://api.p2pquake.net/v2/jma/quake?limit=1&since_date=20251208&until_date=20251208&quake_type=ScalePrompt&min_scale=60");
+    if (!res.ok) throw new Error("地震データが取得できません");
+    const data = await res.json();
+
+    for(const eqData of data){
+      const type = eqData.issue?.type;
+
+      const points = eqData.points;
+
+await new Promise(async (resolve, reject) => {
+  try {
+    // ★ 座標をローカルJSONから取得
+    const coordMap = await loadCoordMap();
+    let latlngs = [];
+
+      if (eqData.issue?.type === "ScalePrompt") {
+        // ----- ScalePrompt 用の GeoJSON 描画 -----
+// ----- ScalePrompt 用の GeoJSON 描画 -----
+// ----- ScalePrompt 用の GeoJSON 描画（途中ログ付き） -----
+console.log("ScalePrompt開始: points.length=", points.length);
+
+// GeoJSON用の専用paneを作成
+if (!map.getPane('geojsonPane')) {
+  map.createPane('geojsonPane');
+  map.getPane('geojsonPane').style.zIndex = 400;
+  console.log("geojsonPane作成完了");
+}
+
+// 重複描画防止
+const areaCodeSet = new Set();
+
+// 全角・半角空白やゼロ幅スペースを削除して比較する関数
+const clean = s => s.replace(/[\s\u3000\u200B]/g, "");
+
+// 震度ごとの色マップ
+const colors = {
+  "1":"#f2f2ff","2":"#00aaff","3":"#0041ff","4":"#fae696",
+  "5-":"#ffe600","5+":"#ff9900","6-":"#ff2800","6+":"#a50021","7":"#b40068"
+};
+
+// 震度テキスト色マップ
+const textColors = {
+  "1":"#000","2":"#fff","3":"#fff","4":"#000",
+  "5-":"#000","5+":"#000","6-":"#fff","6+":"#fff","7":"#fff"
+};
+
+// P2P scale → 日本式震度
+const p2pToShindo = {10:"1",20:"2",30:"3",40:"4",45:"5-",50:"5+",55:"6-",60:"6+",70:"7"};
+
+// ★ ScalePrompt用の地方マップをロード
+const areaMap = await loadAreaMap(); // { "鳥取県西部": { areaCode: "xxxx" }, ... }
+
+const shindoOrder = {
+  "1": 1,
+  "2": 2,
+  "3": 3,
+  "4": 4,
+  "5-": 5,
+  "5+": 6,
+  "6-": 7,
+  "6+": 8,
+  "7": 9
+};
+        
+// 震度を大きい順にソート
+points.sort((a, b) => {
+  const shA = shindoOrder[p2pToShindo[a.scale]];
+  const shB = shindoOrder[p2pToShindo[b.scale]];
+  return shA - shB; // 小→大（大きい震度が最後に描画される）
+});
+        
+for (const p of points) {
+  console.log("処理中のポイント:", p.addr);
+
+  // areaMapから地方コードを取得
+  const areaData = areaMap[p.addr];
+  if (!areaData) {
+    console.warn("coords.json に該当エリアなし:", p.addr);
+    continue;
+  }
+
+  const areaCode = areaData.areaCode; // 地方コードを直接取得
+  if (areaCodeSet.has(areaCode)) {
+    console.log("既に描画済み:", areaCode);
+    continue;
+  }
+  areaCodeSet.add(areaCode);
+
+  // 震度を日本式に変換
+  const intensity = p2pToShindo[p.scale];
+  const fillColor = colors[intensity] || "gray";
+  const textColor = textColors[intensity] || "#000";
+
+  try {
+    console.log("GeoJSON fetch開始:", areaCode);
+    const res = await fetch(`./geojson/${areaCode}.json`);
+    if (!res.ok) throw new Error(`${p.addr} のGeoJSON取得失敗`);
+    const geojson = await res.json();
+    console.log("GeoJSON取得成功:", areaCode, "features数:", geojson.features?.length);
+
+    L.geoJSON(geojson, {
+      pane: 'geojsonPane',
+      style: {
+        color: fillColor,       // 枠線
+        weight: 2,
+        fillColor: fillColor,   // 塗り
+        fillOpacity: 0.5
+      },
+      onEachFeature: (feature, layer) => {
+        // ポリゴン中心に震度テキストを置く
+        const center = layer.getBounds().getCenter();
+        L.marker(center, {
+          icon: L.divIcon({
+            className: 'shindo-label',
+            html: `<div style="color:${textColor};font-weight:bold;text-align:center;font-size:1.5em;">${intensity}</div>`,
+            iconSize: [24,24],
+            iconAnchor: [12,12]
+          }),
+          interactive: false
+        }).addTo(map);
+      }
+    }).addTo(map);
+
+    console.log(`GeoJSON描画完了: ${p.addr} (${areaCode}) 震度=${intensity}`);
+  } catch (err) {
+    console.error("GeoJSON描画エラー:", err);
+  }
+}
+
+console.log("ScalePrompt の全GeoJSON描画完了");
+resolve();
+      }else {
+      // ----- 通常の震度マーカー描画 -----
+      points.forEach(p => {
+        const latlon = coordMap[p.addr];
+        const intensity = p2pToShindo[p.scale];
+        if (latlon && intensity) {
+          addIntensityMarker(
+            latlon.lat,
+            latlon.lon,
+            intensity,
+            `<div style="text-align:center;">
+              ${latlon.pref}${p.addr}${latlon.affi ? `<br>（${latlon.affi}）` : ""}
+            </div>`
+          );
+          latlngs.push([latlon.lat, latlon.lon]);
+        }
+      });
+    
+}
+      
+
+
+          const eq = eqData.earthquake;
+          const hypo = eq.hypocenter;
+      
+          if (hypo?.latitude != null && hypo?.longitude != null &&
+              hypo.latitude !== -200 && hypo.longitude !== -200) {
+            latlngs.push([hypo.latitude, hypo.longitude]);
+          }
+      
+          if (latlngs.length > 0) {
+            map.fitBounds(L.latLngBounds(latlngs), {
+              padding:[150,150],
+              maxZoom:8
+            });
+          }
+      
+          document.getElementById('loading').style.display='none';
+          const hypoInfoEl = document.getElementById('hypo-info');
+      
+          // ===== 震源マーカー =====
+          if (hypo?.latitude != null && hypo?.longitude != null &&
+              hypo.latitude !== -200 && hypo.longitude !== -200) {
+      
+            const size=30, thickness=5, lat=hypo.latitude, lon=hypo.longitude;
+            const crossIcon = L.divIcon({
+              className:'',
+              html:`<div style="width:${size}px;height:${size}px;position:relative;transform: rotate(45deg);">
+                <div style="position:absolute;top:0;left:${size/2-thickness/2}px;width:${thickness}px;height:${size}px;background:red;"></div>
+                <div style="position:absolute;left:0;top:${size/2-thickness/2}px;width:${size}px;height:${thickness}px;background:red;"></div>
+              </div>`,
+              iconSize:[size,size],
+              iconAnchor:[size/2,size/2],
+              pane:'hypocenterPane'
+            });
+      
+            const crossMarker = L.marker([lat,lon], {
+              icon:crossIcon,
+              interactive:false,
+              zIndexOffset:10000
+            }).addTo(map);
+      
+            /*function blink(){
+              const el = crossMarker.getElement();
+              if(!el) return;
+              el.style.display='block';
+              setTimeout(()=>el.style.display='none',5000);
+            }
+            setInterval(blink, 6000);
+            blink();*/
+          }
+      
+          // ===== 情報表示 =====
+          let nameText = (hypo?.name && hypo.name.trim() !== '') ? hypo.name : '震源地不明';
+          let depthText = (hypo?.depth != null)
+            ? (hypo.depth === -1 ? '不明' : (hypo.depth === 0 ? 'ごく浅い' : hypo.depth+'km'))
+            : '不明';
+          let magnitudeText = (hypo?.magnitude != null)
+            ? (hypo.magnitude === -1 ? '不明' : hypo.magnitude.toFixed(1))
+            : '不明';
+      
+          let timeText = '不明';
+          if(eq.time){
+            const date = new Date(eq.time);
+            if(!isNaN(date)){
+              const yyyy = date.getFullYear();
+              const MM = String(date.getMonth()+1).padStart(2,'0');
+              const dd = String(date.getDate()).padStart(2,'0');
+              const HH = String(date.getHours()).padStart(2,'0');
+              const mm = String(date.getMinutes()).padStart(2,'0');
+              timeText = `${yyyy}/${MM}/${dd} ${HH}:${mm}頃`;
+            }
+          }
+      
+          const tsunami = buildTsunamiText(eq.domesticTsunami, eq.foreignTsunami);
+          if (eqData.issue?.type === "ScalePrompt") {
+            nameText = "震源調査中";
+            magnitudeText = "調査中";
+            depthText = "調査中";
+          }
+      
+          hypoInfoEl.innerHTML = `
+      ${timeText}<br>
+      ${nameText}<br>
+      M${magnitudeText}　深さ ${depthText}<br>
+      ${tsunami}<br>
+      <span style="font-size:0.8em;font-weight:normal;">NAFY 地震マップv1.13.2</span>
+      `;
+      
+          // ===== 最大震度 =====
+          const maxIntensityEl = document.getElementById('max-intensity');
+          const scaleEl = maxIntensityEl.querySelector('.scale');
+          const labelEl = maxIntensityEl.querySelector('.label');
+      
+          const maxScaleMap = {10:"1",20:"2",30:"3",40:"4",45:"5-",50:"5+",55:"6-",60:"6+",70:"7"};
+          const maxScale = eq.maxScale;
+          const intensity = maxScaleMap[maxScale] || "--";
+      
+          scaleEl.textContent = intensity;
+      
+          if (intensity === "--") {
+            maxIntensityEl.style.background = "#ffffff";
+            labelEl.style.color = "#000000";
+            scaleEl.style.color = "#000000";
+          } else {
+            const bgColor = colors[intensity];
+            const txtColor = textColors[intensity] || getTextColor(bgColor);
+            maxIntensityEl.style.background = bgColor;
+            labelEl.style.color = txtColor;
+            scaleEl.style.color = txtColor;
+          }
+      
+          updateMaxIntensityPosition();
+          window.addEventListener('resize', updateMaxIntensityPosition);
+      
+          resolve();
+        } catch(e) {
+          reject(e);
+        }
+      });
+
+      break; // 最新の1件だけ表示
+    }
+
+  } catch(error){
+    const loadingEl = document.getElementById('loading');
+    loadingEl.innerHTML = `<b>エラー</b><br>
+エラーが発生しました。<br>
+ページを更新して実行しなおしてください。<br>
+繰り返し発生する場合は報告をお願いします。<br>
+=ErrorCode=<br>
+(${error.message})`;
+    console.error(error);
+  }
+})();
+
+// ==================== ミニマップ（完璧版）===================
+function initMiniMap() {
+  if (map._miniMap) return;
+
+  // 入力値取得（デフォルトは200x100）
+  const w = parseInt(document.getElementById('minimap-width')?.value) || 200;
+  const h = parseInt(document.getElementById('minimap-height')?.value) || 100;
+
+  const miniMapEl = document.getElementById('minimap');
+  miniMapEl.style.width = w + 'px';
+  miniMapEl.style.height = h + 'px';
+
+  const miniMap = L.map(miniMapEl, {
+    attributionControl: false,
+    zoomControl: false,
+    dragging: true,
+    scrollWheelZoom: true,
+    doubleClickZoom: true,
+    boxZoom: false,
+    keyboard: false,
+    touchZoom: true,
+    tap: true
+  }).setView([37.5, 138], 5);
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    subdomains: 'abcd',
+    maxZoom: 19
+  }).addTo(miniMap);
+
+  const rect = L.rectangle(map.getBounds(), {
+    color: "#ff0000",
+    weight: 3,
+    fillOpacity: 0,
+    interactive: false
+  }).addTo(miniMap);
+
+  map.on('moveend', () => rect.setBounds(map.getBounds()));
+  rect.setBounds(map.getBounds());
+  miniMapEl.style.display = 'block';
+
+  map._miniMap = miniMap;
+  map._miniMapRect = rect;
+}
+
+// 入力値を反映するボタン
+document.getElementById('update-minimap-size').addEventListener('click', () => {
+  if(map._miniMap) {
+    map._miniMap.remove(); // 古いミニマップ削除
+    map._miniMap = null;
+    map._miniMapRect = null;
+  }
+  initMiniMap(); // 再生成
+});
+
+// ==================== チェックボックス＋ヘルプボタン（これで絶対動く）===================
+document.addEventListener('DOMContentLoaded', () => {
+  map.invalidateSize();
+  // ミニマップチェックボックス
+  const checkbox = document.getElementById('show-minimap-checkbox');
+  if (checkbox) {
+    checkbox.addEventListener('change', e => {
+      if (e.target.checked) {
+        initMiniMap();
+      } else {
+        document.getElementById('minimap').style.display = 'none';
+        if (map._miniMap) {
+          map._miniMap.remove();
+          map._miniMap = null;
+          map._miniMapRect = null;
+        }
+      }
+    });
+  }
+
+  // ヘルプボタン＆ポップアップ
+  const helpButton = document.getElementById('help-button');
+  const helpPopup = document.getElementById('help-popup');
+  const popupClose = document.getElementById('popup-close');
+
+  if (helpButton && helpPopup) {
+    helpButton.addEventListener('click', () => helpPopup.style.display = 'flex');
+    popupClose.addEventListener('click', () => helpPopup.style.display = 'none');
+    helpPopup.addEventListener('click', e => {
+      if (e.target === helpPopup) helpPopup.style.display = 'none';
+    });
+  }
+});
+</script>
+
+<!-- 画面キャプチャ用ライブラリ -->
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script>
+// ===============================
+// hypo-info を押した瞬間スクショ → 新しいタブで画像表示（フォント対応版）
+// ===============================
+
+const hypoInfo = document.getElementById("hypo-info");
+
+hypoInfo.addEventListener("click", function(e){
+  e.preventDefault();
+  e.stopPropagation();
+
+  // まずクリック直後に空タブを開く（iOSでも安全）
+  const newTab = window.open("", "_blank");
+
+  // フォントの読み込み完了を待ってから canvas 化
+  document.fonts.ready.then(() => {
+    setTimeout(() => { // 500ms 待つ
+      html2canvas(document.body, { useCORS: true, allowTaint: true, scale: 2 })
+        .then(canvas => {
+          canvas.toBlob(blob => {
+            const url = URL.createObjectURL(blob);
+            newTab.location.href = url;
+          }, "image/png");
+        })
+        .catch(err => {
+          console.error(err);
+          alert("スクリーンショット処理に失敗しました。");
+          if (newTab) newTab.close();
+        });
+    }, 500);
+  });
+});
+</script>    
+    
+</body>
+</html>
