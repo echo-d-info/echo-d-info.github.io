@@ -1,0 +1,57 @@
+/* ===== リセット ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== 基本設定 ===== */
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #111;
+  color: #fff;
+
+  overflow: hidden; /* スクロール禁止（重要） */
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ===== アプリ領域 ===== */
+#app {
+  width: 100%;
+  height: 100vh;
+
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== 非表示制御 ===== */
+.hidden {
+  display: none !important;
+}
+
+/* ===== テキスト共通 ===== */
+div {
+  line-height: 1.2;
+}
+
+/* ===== 選択・タップ制御 ===== */
+* {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ===== 画像・メディア（保険） ===== */
+img, video {
+  max-width: 100%;
+  display: block;
+}
