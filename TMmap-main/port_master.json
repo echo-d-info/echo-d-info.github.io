@@ -1,0 +1,6812 @@
+[
+  {
+    "code": "10001",
+    "name": "釧路",
+    "latitude": 42.983333333333334,
+    "longitude": 144.36666666666667,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "062",
+      "1957": "042",
+      "1958": "022",
+      "1968": "002",
+      "1999": "100"
+    },
+    "sourceLine": 5
+  },
+  {
+    "code": "10002",
+    "name": "根室市花咲",
+    "latitude": 43.28333333333333,
+    "longitude": 145.56666666666666,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "062",
+      "1957": "042",
+      "1958": "022",
+      "1968": "002",
+      "1999": "100"
+    },
+    "sourceLine": 6
+  },
+  {
+    "code": "10020",
+    "name": "根室港",
+    "latitude": 43.35,
+    "longitude": 145.58333333333334,
+    "organization": "釧路開発建設部",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "100"
+    },
+    "sourceLine": 7
+  },
+  {
+    "code": "10021",
+    "name": "浜中町霧多布港",
+    "latitude": 43.083333333333336,
+    "longitude": 145.11666666666667,
+    "organization": "釧路開発建設部",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "100"
+    },
+    "sourceLine": 8
+  },
+  {
+    "code": "10050",
+    "name": "釧路沖１００ｋｍＡ",
+    "latitude": 42.083333333333336,
+    "longitude": 144.63333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "100"
+    },
+    "sourceLine": 9
+  },
+  {
+    "code": "10060",
+    "name": "釧路沖８０ｋｍＡ",
+    "latitude": 42.233333333333334,
+    "longitude": 144.85,
+    "organization": "海洋研究開発機構",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "100"
+    },
+    "sourceLine": 10
+  },
+  {
+    "code": "10061",
+    "name": "釧路沖８０ｋｍＢ",
+    "latitude": 42.233333333333334,
+    "longitude": 145.2,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "100"
+    },
+    "sourceLine": 11
+  },
+  {
+    "code": "10062",
+    "name": "根室南東沖８０ｋｍＡ",
+    "latitude": 42.583333333333336,
+    "longitude": 146.08333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "100"
+    },
+    "sourceLine": 12
+  },
+  {
+    "code": "10070",
+    "name": "釧路沖６０ｋｍＡ",
+    "latitude": 42.483333333333334,
+    "longitude": 145.15,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "100"
+    },
+    "sourceLine": 13
+  },
+  {
+    "code": "10071",
+    "name": "根室南東沖５０ｋｍＡ",
+    "latitude": 42.766666666666666,
+    "longitude": 145.71666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "100"
+    },
+    "sourceLine": 14
+  },
+  {
+    "code": "10072",
+    "name": "釧路沖５０ｋｍＡ",
+    "latitude": 42.63333333333333,
+    "longitude": 145.4,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "100"
+    },
+    "sourceLine": 15
+  },
+  {
+    "code": "10073",
+    "name": "根室南東沖６０ｋｍＡ",
+    "latitude": 42.8,
+    "longitude": 146.01666666666668,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "100"
+    },
+    "sourceLine": 16
+  },
+  {
+    "code": "10100",
+    "name": "浦河",
+    "latitude": 42.166666666666664,
+    "longitude": 142.76666666666668,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "062",
+      "1957": "042",
+      "1958": "022",
+      "1968": "002",
+      "1999": "101"
+    },
+    "sourceLine": 17
+  },
+  {
+    "code": "10101",
+    "name": "浦河",
+    "latitude": 42.166666666666664,
+    "longitude": 142.76666666666668,
+    "organization": "室蘭開発建設部",
+    "forecastAreas": {
+      "1952": "062",
+      "1957": "042",
+      "1958": "022",
+      "1968": "002",
+      "1999": "101"
+    },
+    "sourceLine": 18
+  },
+  {
+    "code": "10102",
+    "name": "十勝港",
+    "latitude": 42.3,
+    "longitude": 143.31666666666666,
+    "organization": "帯広開発建設部",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "101"
+    },
+    "sourceLine": 19
+  },
+  {
+    "code": "10103",
+    "name": "えりも町庶野",
+    "latitude": 42.05,
+    "longitude": 143.3,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "101"
+    },
+    "sourceLine": 20
+  },
+  {
+    "code": "10150",
+    "name": "十勝沖１００ｋｍＡ",
+    "latitude": 41.7,
+    "longitude": 144.43333333333334,
+    "organization": "海洋研究開発機構",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "101"
+    },
+    "sourceLine": 21
+  },
+  {
+    "code": "10151",
+    "name": "浦河沖１００ｋｍＡ",
+    "latitude": 41.05,
+    "longitude": 143.11666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "101"
+    },
+    "sourceLine": 22
+  },
+  {
+    "code": "10152",
+    "name": "浦河沖１００ｋｍＢ",
+    "latitude": 41.083333333333336,
+    "longitude": 142.76666666666668,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "101"
+    },
+    "sourceLine": 23
+  },
+  {
+    "code": "10153",
+    "name": "十勝沖９０ｋｍＡ",
+    "latitude": 41.983333333333334,
+    "longitude": 144.35,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "101"
+    },
+    "sourceLine": 24
+  },
+  {
+    "code": "10160",
+    "name": "十勝沖８０ｋｍＡ",
+    "latitude": 41.75,
+    "longitude": 144.18333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "101"
+    },
+    "sourceLine": 25
+  },
+  {
+    "code": "10161",
+    "name": "十勝沖８０ｋｍＢ",
+    "latitude": 41.5,
+    "longitude": 144.08333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "101"
+    },
+    "sourceLine": 26
+  },
+  {
+    "code": "10162",
+    "name": "十勝沖８０ｋｍＣ",
+    "latitude": 41.36666666666667,
+    "longitude": 143.8,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "101"
+    },
+    "sourceLine": 27
+  },
+  {
+    "code": "10163",
+    "name": "浦河沖７０ｋｍＡ",
+    "latitude": 41.61666666666667,
+    "longitude": 142.48333333333332,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "101"
+    },
+    "sourceLine": 28
+  },
+  {
+    "code": "10170",
+    "name": "十勝沖６０ｋｍＡ",
+    "latitude": 41.36666666666667,
+    "longitude": 143.45,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "101"
+    },
+    "sourceLine": 29
+  },
+  {
+    "code": "10171",
+    "name": "浦河沖６０ｋｍＡ",
+    "latitude": 41.43333333333333,
+    "longitude": 143.13333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "101"
+    },
+    "sourceLine": 30
+  },
+  {
+    "code": "10172",
+    "name": "浦河沖５０ｋｍＡ",
+    "latitude": 41.56666666666667,
+    "longitude": 142.81666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "101"
+    },
+    "sourceLine": 31
+  },
+  {
+    "code": "10201",
+    "name": "室蘭",
+    "latitude": 42.35,
+    "longitude": 140.95,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "062",
+      "1957": "042",
+      "1958": "022",
+      "1968": "002",
+      "1999": "102"
+    },
+    "sourceLine": 32
+  },
+  {
+    "code": "10202",
+    "name": "函館",
+    "latitude": 41.78333333333333,
+    "longitude": 140.71666666666667,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "062",
+      "1957": "042",
+      "1958": "022",
+      "1968": "002",
+      "1999": "102"
+    },
+    "sourceLine": 33
+  },
+  {
+    "code": "10203",
+    "name": "苫小牧西港",
+    "latitude": 42.63333333333333,
+    "longitude": 141.61666666666667,
+    "organization": "室蘭開発建設部",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "102"
+    },
+    "sourceLine": 34
+  },
+  {
+    "code": "10204",
+    "name": "福島町吉岡",
+    "latitude": 41.45,
+    "longitude": 140.23333333333332,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "062",
+      "1957": "042",
+      "1958": "022",
+      "1968": "002",
+      "1999": "102"
+    },
+    "sourceLine": 35
+  },
+  {
+    "code": "10221",
+    "name": "苫小牧東港",
+    "latitude": 42.6,
+    "longitude": 141.81666666666666,
+    "organization": "室蘭開発建設部",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "102"
+    },
+    "sourceLine": 36
+  },
+  {
+    "code": "10222",
+    "name": "白老港",
+    "latitude": 42.516666666666666,
+    "longitude": 141.31666666666666,
+    "organization": "室蘭開発建設部",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "102"
+    },
+    "sourceLine": 37
+  },
+  {
+    "code": "10223",
+    "name": "渡島森港",
+    "latitude": 42.11666666666667,
+    "longitude": 140.6,
+    "organization": "函館開発建設部",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "102"
+    },
+    "sourceLine": 38
+  },
+  {
+    "code": "10224",
+    "name": "室蘭港",
+    "latitude": 42.35,
+    "longitude": 140.95,
+    "organization": "北海道開発局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "102"
+    },
+    "sourceLine": 39
+  },
+  {
+    "code": "11001",
+    "name": "稚内",
+    "latitude": 45.4,
+    "longitude": 141.68333333333334,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "061",
+      "1957": "041",
+      "1958": "023",
+      "1968": "003",
+      "1999": "110"
+    },
+    "sourceLine": 40
+  },
+  {
+    "code": "11002",
+    "name": "留萌",
+    "latitude": 43.95,
+    "longitude": 141.63333333333333,
+    "organization": "留萌開発建設部",
+    "forecastAreas": {
+      "1952": "063",
+      "1957": "043",
+      "1958": "023",
+      "1968": "003",
+      "1999": "110"
+    },
+    "sourceLine": 41
+  },
+  {
+    "code": "11003",
+    "name": "小樽",
+    "latitude": 43.2,
+    "longitude": 141,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "063",
+      "1957": "043",
+      "1958": "023",
+      "1968": "003",
+      "1999": "110"
+    },
+    "sourceLine": 42
+  },
+  {
+    "code": "11022",
+    "name": "石狩湾新港",
+    "latitude": 43.21666666666667,
+    "longitude": 141.3,
+    "organization": "小樽開発建設部",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "110"
+    },
+    "sourceLine": 43
+  },
+  {
+    "code": "11023",
+    "name": "利尻島沓形港",
+    "latitude": 45.18333333333333,
+    "longitude": 141.13333333333333,
+    "organization": "稚内開発建設部",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "110"
+    },
+    "sourceLine": 44
+  },
+  {
+    "code": "11024",
+    "name": "羽幌港",
+    "latitude": 44.36666666666667,
+    "longitude": 141.7,
+    "organization": "留萌開発建設部",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "110"
+    },
+    "sourceLine": 45
+  },
+  {
+    "code": "11030",
+    "name": "小樽市忍路",
+    "latitude": 43.21666666666667,
+    "longitude": 140.86666666666667,
+    "organization": "国土地理院",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "110"
+    },
+    "sourceLine": 46
+  },
+  {
+    "code": "11102",
+    "name": "江差",
+    "latitude": 41.86666666666667,
+    "longitude": 140.13333333333333,
+    "organization": "函館開発建設部",
+    "forecastAreas": {
+      "1952": "063",
+      "1957": "043",
+      "1958": "023",
+      "1968": "003",
+      "1999": "111"
+    },
+    "sourceLine": 47
+  },
+  {
+    "code": "11121",
+    "name": "瀬棚港",
+    "latitude": 42.45,
+    "longitude": 139.85,
+    "organization": "函館開発建設部",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "111"
+    },
+    "sourceLine": 48
+  },
+  {
+    "code": "11122",
+    "name": "岩内港",
+    "latitude": 42.983333333333334,
+    "longitude": 140.5,
+    "organization": "小樽開発建設部",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "111"
+    },
+    "sourceLine": 49
+  },
+  {
+    "code": "11123",
+    "name": "奥尻島奥尻港",
+    "latitude": 42.166666666666664,
+    "longitude": 139.51666666666668,
+    "organization": "小樽開発建設部",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "111"
+    },
+    "sourceLine": 50
+  },
+  {
+    "code": "11130",
+    "name": "奥尻島松江",
+    "latitude": 42.083333333333336,
+    "longitude": 139.48333333333332,
+    "organization": "国土地理院",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "111"
+    },
+    "sourceLine": 51
+  },
+  {
+    "code": "12001",
+    "name": "網走",
+    "latitude": 44.016666666666666,
+    "longitude": 144.28333333333333,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "061",
+      "1957": "041",
+      "1958": "021",
+      "1968": "001",
+      "1999": "120"
+    },
+    "sourceLine": 52
+  },
+  {
+    "code": "12002",
+    "name": "紋別",
+    "latitude": 44.35,
+    "longitude": 143.36666666666667,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "061",
+      "1957": "041",
+      "1958": "021",
+      "1968": "001",
+      "1999": "120"
+    },
+    "sourceLine": 53
+  },
+  {
+    "code": "12003",
+    "name": "枝幸港",
+    "latitude": 44.93333333333333,
+    "longitude": 142.58333333333334,
+    "organization": "稚内開発建設部",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "120"
+    },
+    "sourceLine": 54
+  },
+  {
+    "code": "12020",
+    "name": "紋別港",
+    "latitude": 44.35,
+    "longitude": 143.36666666666667,
+    "organization": "網走開発建設部",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "120"
+    },
+    "sourceLine": 55
+  },
+  {
+    "code": "20001",
+    "name": "深浦",
+    "latitude": 40.65,
+    "longitude": 139.93333333333334,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "065",
+      "1957": "045",
+      "1958": "025",
+      "1968": "005",
+      "1999": "200"
+    },
+    "sourceLine": 56
+  },
+  {
+    "code": "20002",
+    "name": "竜飛",
+    "latitude": 41.25,
+    "longitude": 140.38333333333333,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "065",
+      "1957": "045",
+      "1958": "025",
+      "1968": "005",
+      "1999": "200"
+    },
+    "sourceLine": 57
+  },
+  {
+    "code": "20090",
+    "name": "青森深浦沖",
+    "latitude": 40.78333333333333,
+    "longitude": 139.93333333333334,
+    "organization": "東北地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "200"
+    },
+    "sourceLine": 58
+  },
+  {
+    "code": "20101",
+    "name": "八戸",
+    "latitude": 40.53333333333333,
+    "longitude": 141.53333333333333,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "064",
+      "1957": "044",
+      "1958": "024",
+      "1968": "004",
+      "1999": "201"
+    },
+    "sourceLine": 59
+  },
+  {
+    "code": "20102",
+    "name": "むつ市関根浜",
+    "latitude": 41.36666666666667,
+    "longitude": 141.23333333333332,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "064",
+      "1957": "044",
+      "1958": "024",
+      "1968": "004",
+      "1999": "201"
+    },
+    "sourceLine": 60
+  },
+  {
+    "code": "20120",
+    "name": "むつ小川原港",
+    "latitude": 40.93333333333333,
+    "longitude": 141.38333333333333,
+    "organization": "東北地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "201"
+    },
+    "sourceLine": 61
+  },
+  {
+    "code": "20121",
+    "name": "八戸港",
+    "latitude": 40.53333333333333,
+    "longitude": 141.55,
+    "organization": "東北地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "201"
+    },
+    "sourceLine": 62
+  },
+  {
+    "code": "20150",
+    "name": "青森東方沖１００ｋｍＡ",
+    "latitude": 40.516666666666666,
+    "longitude": 142.96666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "201"
+    },
+    "sourceLine": 63
+  },
+  {
+    "code": "20151",
+    "name": "青森東方沖９０ｋｍＡ",
+    "latitude": 41.016666666666666,
+    "longitude": 142.43333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "201"
+    },
+    "sourceLine": 64
+  },
+  {
+    "code": "20160",
+    "name": "青森東方沖８０ｋｍＡ",
+    "latitude": 40.6,
+    "longitude": 142.63333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "201"
+    },
+    "sourceLine": 65
+  },
+  {
+    "code": "20170",
+    "name": "青森東方沖６０ｋｍＡ",
+    "latitude": 41.416666666666664,
+    "longitude": 142.21666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "201"
+    },
+    "sourceLine": 66
+  },
+  {
+    "code": "20171",
+    "name": "青森東方沖６０ｋｍＢ",
+    "latitude": 40.9,
+    "longitude": 142.1,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "201"
+    },
+    "sourceLine": 67
+  },
+  {
+    "code": "20172",
+    "name": "青森東方沖５０ｋｍＡ",
+    "latitude": 41.2,
+    "longitude": 142.03333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "201"
+    },
+    "sourceLine": 68
+  },
+  {
+    "code": "20173",
+    "name": "青森東方沖５０ｋｍＢ",
+    "latitude": 40.6,
+    "longitude": 142.28333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "201"
+    },
+    "sourceLine": 69
+  },
+  {
+    "code": "20180",
+    "name": "青森東方沖４０ｋｍＡ",
+    "latitude": 40.95,
+    "longitude": 141.88333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "201"
+    },
+    "sourceLine": 70
+  },
+  {
+    "code": "20181",
+    "name": "青森東方沖３０ｋｍＡ",
+    "latitude": 40.78333333333333,
+    "longitude": 141.78333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "201"
+    },
+    "sourceLine": 71
+  },
+  {
+    "code": "20190",
+    "name": "青森八戸沖",
+    "latitude": 40.63333333333333,
+    "longitude": 141.75,
+    "organization": "東北地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "201"
+    },
+    "sourceLine": 72
+  },
+  {
+    "code": "20201",
+    "name": "青森",
+    "latitude": 40.833333333333336,
+    "longitude": 140.76666666666668,
+    "organization": "東北地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "202"
+    },
+    "sourceLine": 73
+  },
+  {
+    "code": "20202",
+    "name": "むつ市大湊",
+    "latitude": 41.25,
+    "longitude": 141.15,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "065",
+      "1957": "045",
+      "1958": "025",
+      "1968": "005",
+      "1999": "202"
+    },
+    "sourceLine": 74
+  },
+  {
+    "code": "21001",
+    "name": "宮古",
+    "latitude": 39.65,
+    "longitude": 141.98333333333332,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "064",
+      "1957": "044",
+      "1958": "024",
+      "1968": "004",
+      "1999": "210"
+    },
+    "sourceLine": 75
+  },
+  {
+    "code": "21002",
+    "name": "大船渡",
+    "latitude": 39.016666666666666,
+    "longitude": 141.75,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "064",
+      "1957": "044",
+      "1958": "024",
+      "1968": "004",
+      "1999": "210"
+    },
+    "sourceLine": 76
+  },
+  {
+    "code": "21003",
+    "name": "釜石",
+    "latitude": 39.266666666666666,
+    "longitude": 141.88333333333333,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "064",
+      "1957": "044",
+      "1958": "024",
+      "1968": "004",
+      "1999": "210"
+    },
+    "sourceLine": 77
+  },
+  {
+    "code": "21020",
+    "name": "久慈港",
+    "latitude": 40.2,
+    "longitude": 141.8,
+    "organization": "東北地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "210"
+    },
+    "sourceLine": 78
+  },
+  {
+    "code": "21050",
+    "name": "岩手沖９０ｋｍＡ",
+    "latitude": 40.083333333333336,
+    "longitude": 142.96666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "210"
+    },
+    "sourceLine": 79
+  },
+  {
+    "code": "21051",
+    "name": "岩手沖９０ｋｍＢ",
+    "latitude": 39.31666666666667,
+    "longitude": 143.11666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "210"
+    },
+    "sourceLine": 80
+  },
+  {
+    "code": "21060",
+    "name": "岩手沖７０ｋｍＡ",
+    "latitude": 39.233333333333334,
+    "longitude": 142.76666666666668,
+    "organization": "東京大学地震研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "210"
+    },
+    "sourceLine": 81
+  },
+  {
+    "code": "21061",
+    "name": "岩手沖８０ｋｍＡ",
+    "latitude": 39.71666666666667,
+    "longitude": 143.03333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "210"
+    },
+    "sourceLine": 82
+  },
+  {
+    "code": "21070",
+    "name": "岩手沖６０ｋｍＡ",
+    "latitude": 40.11666666666667,
+    "longitude": 142.61666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "210"
+    },
+    "sourceLine": 83
+  },
+  {
+    "code": "21071",
+    "name": "岩手沖６０ｋｍＢ",
+    "latitude": 39.75,
+    "longitude": 142.68333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "210"
+    },
+    "sourceLine": 84
+  },
+  {
+    "code": "21072",
+    "name": "岩手沖６０ｋｍＣ",
+    "latitude": 39.36666666666667,
+    "longitude": 142.8,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "210"
+    },
+    "sourceLine": 85
+  },
+  {
+    "code": "21080",
+    "name": "岩手沖４０ｋｍＡ",
+    "latitude": 39.25,
+    "longitude": 142.43333333333334,
+    "organization": "東京大学地震研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "210"
+    },
+    "sourceLine": 86
+  },
+  {
+    "code": "21081",
+    "name": "岩手沖４０ｋｍＢ",
+    "latitude": 40.333333333333336,
+    "longitude": 142.26666666666668,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "210"
+    },
+    "sourceLine": 87
+  },
+  {
+    "code": "21082",
+    "name": "岩手沖４０ｋｍＣ",
+    "latitude": 40.11666666666667,
+    "longitude": 142.4,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "210"
+    },
+    "sourceLine": 88
+  },
+  {
+    "code": "21083",
+    "name": "岩手沖３０ｋｍＡ",
+    "latitude": 39.733333333333334,
+    "longitude": 142.33333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "210"
+    },
+    "sourceLine": 89
+  },
+  {
+    "code": "21084",
+    "name": "岩手沖３０ｋｍＢ",
+    "latitude": 39.45,
+    "longitude": 142.45,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "210"
+    },
+    "sourceLine": 90
+  },
+  {
+    "code": "21090",
+    "name": "岩手釜石沖",
+    "latitude": 39.266666666666666,
+    "longitude": 142.1,
+    "organization": "東北地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "210"
+    },
+    "sourceLine": 91
+  },
+  {
+    "code": "21091",
+    "name": "岩手宮古沖",
+    "latitude": 39.63333333333333,
+    "longitude": 142.18333333333334,
+    "organization": "東北地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "210"
+    },
+    "sourceLine": 92
+  },
+  {
+    "code": "21092",
+    "name": "岩手久慈沖",
+    "latitude": 40.11666666666667,
+    "longitude": 142.06666666666666,
+    "organization": "東北地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "210"
+    },
+    "sourceLine": 93
+  },
+  {
+    "code": "22001",
+    "name": "牡鹿町鮎川",
+    "latitude": 38.3,
+    "longitude": 141.5,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "064",
+      "1957": "044",
+      "1958": "024",
+      "1968": "004",
+      "1999": "220"
+    },
+    "sourceLine": 94
+  },
+  {
+    "code": "22002",
+    "name": "石巻市鮎川",
+    "latitude": 38.3,
+    "longitude": 141.5,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "064",
+      "1957": "044",
+      "1958": "024",
+      "1968": "004",
+      "1999": "220"
+    },
+    "sourceLine": 95
+  },
+  {
+    "code": "22021",
+    "name": "仙台港",
+    "latitude": 38.266666666666666,
+    "longitude": 141,
+    "organization": "東北地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "220"
+    },
+    "sourceLine": 96
+  },
+  {
+    "code": "22022",
+    "name": "石巻港",
+    "latitude": 38.4,
+    "longitude": 141.26666666666668,
+    "organization": "東北地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "220"
+    },
+    "sourceLine": 97
+  },
+  {
+    "code": "22050",
+    "name": "宮城沖９０ｋｍＡ",
+    "latitude": 38.03333333333333,
+    "longitude": 142.56666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "220"
+    },
+    "sourceLine": 98
+  },
+  {
+    "code": "22060",
+    "name": "宮城沖８０ｋｍＡ",
+    "latitude": 38.86666666666667,
+    "longitude": 142.81666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "220"
+    },
+    "sourceLine": 99
+  },
+  {
+    "code": "22061",
+    "name": "宮城沖８０ｋｍＢ",
+    "latitude": 38.5,
+    "longitude": 142.5,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "220"
+    },
+    "sourceLine": 100
+  },
+  {
+    "code": "22070",
+    "name": "宮城沖６０ｋｍＡ",
+    "latitude": 38.05,
+    "longitude": 142.23333333333332,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "220"
+    },
+    "sourceLine": 101
+  },
+  {
+    "code": "22071",
+    "name": "宮城沖５０ｋｍＡ",
+    "latitude": 38.93333333333333,
+    "longitude": 142.48333333333332,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "220"
+    },
+    "sourceLine": 102
+  },
+  {
+    "code": "22072",
+    "name": "宮城沖５０ｋｍＢ",
+    "latitude": 38.583333333333336,
+    "longitude": 142.18333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "220"
+    },
+    "sourceLine": 103
+  },
+  {
+    "code": "22080",
+    "name": "宮城沖４０ｋｍＡ",
+    "latitude": 38.833333333333336,
+    "longitude": 142.18333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "220"
+    },
+    "sourceLine": 104
+  },
+  {
+    "code": "22081",
+    "name": "宮城沖３０ｋｍＡ",
+    "latitude": 38.1,
+    "longitude": 141.9,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "220"
+    },
+    "sourceLine": 105
+  },
+  {
+    "code": "22090",
+    "name": "宮城金華山沖",
+    "latitude": 38.233333333333334,
+    "longitude": 141.68333333333334,
+    "organization": "東北地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "220"
+    },
+    "sourceLine": 106
+  },
+  {
+    "code": "22091",
+    "name": "気仙沼広田湾沖",
+    "latitude": 38.85,
+    "longitude": 141.9,
+    "organization": "東北地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "220"
+    },
+    "sourceLine": 107
+  },
+  {
+    "code": "22095",
+    "name": "宮城牡鹿沖",
+    "latitude": 38.1,
+    "longitude": 141.55,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "220"
+    },
+    "sourceLine": 108
+  },
+  {
+    "code": "23001",
+    "name": "秋田",
+    "latitude": 39.75,
+    "longitude": 140.06666666666666,
+    "organization": "東北地方整備局",
+    "forecastAreas": {
+      "1952": "065",
+      "1957": "045",
+      "1958": "025",
+      "1968": "005",
+      "1999": "230"
+    },
+    "sourceLine": 109
+  },
+  {
+    "code": "23090",
+    "name": "秋田男鹿沖",
+    "latitude": 40.21666666666667,
+    "longitude": 139.66666666666666,
+    "organization": "東北地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "230"
+    },
+    "sourceLine": 110
+  },
+  {
+    "code": "24001",
+    "name": "酒田",
+    "latitude": 38.916666666666664,
+    "longitude": 139.81666666666666,
+    "organization": "東北地方整備局",
+    "forecastAreas": {
+      "1952": "065",
+      "1957": "045",
+      "1958": "025",
+      "1968": "005",
+      "1999": "240"
+    },
+    "sourceLine": 111
+  },
+  {
+    "code": "24030",
+    "name": "飛島",
+    "latitude": 39.18333333333333,
+    "longitude": 139.55,
+    "organization": "国土地理院",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "240"
+    },
+    "sourceLine": 112
+  },
+  {
+    "code": "24031",
+    "name": "鶴岡市鼠ケ関",
+    "latitude": 38.56666666666667,
+    "longitude": 139.55,
+    "organization": "国土地理院",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "240"
+    },
+    "sourceLine": 113
+  },
+  {
+    "code": "24090",
+    "name": "山形酒田沖",
+    "latitude": 38.96666666666667,
+    "longitude": 139.6,
+    "organization": "東北地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "240"
+    },
+    "sourceLine": 114
+  },
+  {
+    "code": "25002",
+    "name": "いわき市小名浜",
+    "latitude": 36.93333333333333,
+    "longitude": 140.9,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "064",
+      "1957": "044",
+      "1958": "024",
+      "1968": "004",
+      "1999": "250"
+    },
+    "sourceLine": 115
+  },
+  {
+    "code": "25030",
+    "name": "相馬",
+    "latitude": 37.833333333333336,
+    "longitude": 140.96666666666667,
+    "organization": "国土地理院",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "250"
+    },
+    "sourceLine": 116
+  },
+  {
+    "code": "25050",
+    "name": "福島沖９０ｋｍＡ",
+    "latitude": 37.666666666666664,
+    "longitude": 142.3,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "250"
+    },
+    "sourceLine": 117
+  },
+  {
+    "code": "25060",
+    "name": "福島沖７０ｋｍＡ",
+    "latitude": 37.7,
+    "longitude": 141.96666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "250"
+    },
+    "sourceLine": 118
+  },
+  {
+    "code": "25061",
+    "name": "福島沖７０ｋｍＢ",
+    "latitude": 37.28333333333333,
+    "longitude": 141.88333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "250"
+    },
+    "sourceLine": 119
+  },
+  {
+    "code": "25070",
+    "name": "福島沖５０ｋｍＡ",
+    "latitude": 37.7,
+    "longitude": 141.63333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "250"
+    },
+    "sourceLine": 120
+  },
+  {
+    "code": "25071",
+    "name": "福島沖５０ｋｍＢ",
+    "latitude": 37.3,
+    "longitude": 141.56666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "250"
+    },
+    "sourceLine": 121
+  },
+  {
+    "code": "25080",
+    "name": "福島沖３０ｋｍＡ",
+    "latitude": 37.85,
+    "longitude": 141.38333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "250"
+    },
+    "sourceLine": 122
+  },
+  {
+    "code": "25081",
+    "name": "福島沖３０ｋｍＢ",
+    "latitude": 37.1,
+    "longitude": 141.36666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "250"
+    },
+    "sourceLine": 123
+  },
+  {
+    "code": "25090",
+    "name": "福島小名浜沖",
+    "latitude": 36.96666666666667,
+    "longitude": 141.18333333333334,
+    "organization": "東北地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "250"
+    },
+    "sourceLine": 124
+  },
+  {
+    "code": "30001",
+    "name": "大洗",
+    "latitude": 36.3,
+    "longitude": 140.56666666666666,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "300"
+    },
+    "sourceLine": 125
+  },
+  {
+    "code": "30020",
+    "name": "神栖市鹿島港",
+    "latitude": 35.93333333333333,
+    "longitude": 140.7,
+    "organization": "関東地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "300"
+    },
+    "sourceLine": 126
+  },
+  {
+    "code": "30050",
+    "name": "茨城沖９０ｋｍＡ",
+    "latitude": 36.63333333333333,
+    "longitude": 141.83333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "300"
+    },
+    "sourceLine": 127
+  },
+  {
+    "code": "30051",
+    "name": "茨城沖９０ｋｍＢ",
+    "latitude": 36,
+    "longitude": 141.8,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "300"
+    },
+    "sourceLine": 128
+  },
+  {
+    "code": "30060",
+    "name": "茨城沖７０ｋｍＡ",
+    "latitude": 36.06666666666667,
+    "longitude": 141.51666666666668,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "300"
+    },
+    "sourceLine": 129
+  },
+  {
+    "code": "30070",
+    "name": "茨城沖６０ｋｍＡ",
+    "latitude": 36.666666666666664,
+    "longitude": 141.51666666666668,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "300"
+    },
+    "sourceLine": 130
+  },
+  {
+    "code": "30071",
+    "name": "茨城沖５０ｋｍＡ",
+    "latitude": 36.15,
+    "longitude": 141.2,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "300"
+    },
+    "sourceLine": 131
+  },
+  {
+    "code": "30072",
+    "name": "茨城沖５０ｋｍＢ",
+    "latitude": 35.85,
+    "longitude": 141.38333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "300"
+    },
+    "sourceLine": 132
+  },
+  {
+    "code": "30080",
+    "name": "茨城沖４０ｋｍＡ",
+    "latitude": 36.833333333333336,
+    "longitude": 141.33333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "300"
+    },
+    "sourceLine": 133
+  },
+  {
+    "code": "30095",
+    "name": "茨城神栖沖",
+    "latitude": 35.9,
+    "longitude": 141.05,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "300"
+    },
+    "sourceLine": 134
+  },
+  {
+    "code": "31001",
+    "name": "銚子",
+    "latitude": 35.75,
+    "longitude": 140.86666666666667,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "067",
+      "1957": "047",
+      "1958": "027",
+      "1968": "007",
+      "1999": "310"
+    },
+    "sourceLine": 135
+  },
+  {
+    "code": "31002",
+    "name": "勝浦市興津",
+    "latitude": 35.13333333333333,
+    "longitude": 140.25,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "310"
+    },
+    "sourceLine": 136
+  },
+  {
+    "code": "31050",
+    "name": "千葉東方沖９０ｋｍＡ",
+    "latitude": 35.6,
+    "longitude": 141.9,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "310"
+    },
+    "sourceLine": 137
+  },
+  {
+    "code": "31051",
+    "name": "千葉南東沖９０ｋｍＡ",
+    "latitude": 34.63333333333333,
+    "longitude": 141.08333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "310"
+    },
+    "sourceLine": 138
+  },
+  {
+    "code": "31060",
+    "name": "千葉東方沖８０ｋｍＡ",
+    "latitude": 35.28333333333333,
+    "longitude": 141.58333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "310"
+    },
+    "sourceLine": 139
+  },
+  {
+    "code": "31061",
+    "name": "千葉南東沖８０ｋｍＡ",
+    "latitude": 34.266666666666666,
+    "longitude": 140.41666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "310"
+    },
+    "sourceLine": 140
+  },
+  {
+    "code": "31062",
+    "name": "千葉東方沖７０ｋｍＡ",
+    "latitude": 35.71666666666667,
+    "longitude": 141.65,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "310"
+    },
+    "sourceLine": 141
+  },
+  {
+    "code": "31063",
+    "name": "千葉東方沖７０ｋｍＢ",
+    "latitude": 35.1,
+    "longitude": 141.2,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "310"
+    },
+    "sourceLine": 142
+  },
+  {
+    "code": "31064",
+    "name": "千葉南東沖８０ｋｍＢ",
+    "latitude": 34.18333333333333,
+    "longitude": 139.98333333333332,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "310"
+    },
+    "sourceLine": 143
+  },
+  {
+    "code": "31070",
+    "name": "千葉南東沖６０ｋｍＡ",
+    "latitude": 34.75,
+    "longitude": 140.75,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "310"
+    },
+    "sourceLine": 144
+  },
+  {
+    "code": "31071",
+    "name": "千葉東方沖６０ｋｍＡ",
+    "latitude": 35.233333333333334,
+    "longitude": 141.3,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "310"
+    },
+    "sourceLine": 145
+  },
+  {
+    "code": "31072",
+    "name": "千葉東方沖６０ｋｍＢ",
+    "latitude": 34.88333333333333,
+    "longitude": 140.96666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "310"
+    },
+    "sourceLine": 146
+  },
+  {
+    "code": "31073",
+    "name": "千葉南東沖６０ｋｍＢ",
+    "latitude": 34.416666666666664,
+    "longitude": 140.2,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "310"
+    },
+    "sourceLine": 147
+  },
+  {
+    "code": "31074",
+    "name": "千葉東方沖５０ｋｍＡ",
+    "latitude": 35.45,
+    "longitude": 141.38333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "310"
+    },
+    "sourceLine": 148
+  },
+  {
+    "code": "31075",
+    "name": "千葉東方沖５０ｋｍＢ",
+    "latitude": 35.11666666666667,
+    "longitude": 140.96666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "310"
+    },
+    "sourceLine": 149
+  },
+  {
+    "code": "31080",
+    "name": "千葉南東沖４０ｋｍＡ",
+    "latitude": 34.8,
+    "longitude": 140.51666666666668,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "310"
+    },
+    "sourceLine": 150
+  },
+  {
+    "code": "31081",
+    "name": "千葉南東沖３０ｋｍＡ",
+    "latitude": 34.6,
+    "longitude": 139.91666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "310"
+    },
+    "sourceLine": 151
+  },
+  {
+    "code": "31082",
+    "name": "千葉東方沖４０ｋｍＡ",
+    "latitude": 35.016666666666666,
+    "longitude": 140.81666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "310"
+    },
+    "sourceLine": 152
+  },
+  {
+    "code": "31083",
+    "name": "千葉南東沖３０ｋｍＢ",
+    "latitude": 34.65,
+    "longitude": 140.08333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "310"
+    },
+    "sourceLine": 153
+  },
+  {
+    "code": "31084",
+    "name": "千葉南東沖３０ｋｍＣ",
+    "latitude": 34.666666666666664,
+    "longitude": 139.81666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "310"
+    },
+    "sourceLine": 154
+  },
+  {
+    "code": "31101",
+    "name": "館山市布良",
+    "latitude": 34.916666666666664,
+    "longitude": 139.83333333333334,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "068",
+      "1957": "048",
+      "1958": "028",
+      "1968": "008",
+      "1999": "311"
+    },
+    "sourceLine": 155
+  },
+  {
+    "code": "31201",
+    "name": "千葉",
+    "latitude": 35.6,
+    "longitude": 140.1,
+    "organization": "千葉県",
+    "forecastAreas": {
+      "1952": "068",
+      "1957": "048",
+      "1958": "028",
+      "1968": "008",
+      "1999": "312"
+    },
+    "sourceLine": 156
+  },
+  {
+    "code": "31202",
+    "name": "東京晴海",
+    "latitude": 35.65,
+    "longitude": 139.76666666666668,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "068",
+      "1957": "048",
+      "1958": "028",
+      "1968": "008",
+      "1999": "312"
+    },
+    "sourceLine": 157
+  },
+  {
+    "code": "31203",
+    "name": "横浜",
+    "latitude": 35.46666666666667,
+    "longitude": 139.63333333333333,
+    "organization": "関東地方整備局",
+    "forecastAreas": {
+      "1952": "068",
+      "1957": "048",
+      "1958": "028",
+      "1968": "008",
+      "1999": "312"
+    },
+    "sourceLine": 158
+  },
+  {
+    "code": "31204",
+    "name": "横須賀",
+    "latitude": 35.28333333333333,
+    "longitude": 139.65,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "068",
+      "1957": "048",
+      "1958": "028",
+      "1968": "008",
+      "1999": "312"
+    },
+    "sourceLine": 159
+  },
+  {
+    "code": "31205",
+    "name": "千葉",
+    "latitude": 35.56666666666667,
+    "longitude": 140.05,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "068",
+      "1957": "048",
+      "1958": "028",
+      "1968": "008",
+      "1999": "312"
+    },
+    "sourceLine": 160
+  },
+  {
+    "code": "31206",
+    "name": "横浜",
+    "latitude": 35.45,
+    "longitude": 139.65,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "068",
+      "1957": "048",
+      "1958": "028",
+      "1968": "008",
+      "1999": "312"
+    },
+    "sourceLine": 161
+  },
+  {
+    "code": "32001",
+    "name": "伊豆大島岡田",
+    "latitude": 34.78333333333333,
+    "longitude": 139.38333333333333,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "068",
+      "1957": "048",
+      "1958": "028",
+      "1968": "008",
+      "1999": "320"
+    },
+    "sourceLine": 162
+  },
+  {
+    "code": "32002",
+    "name": "三宅島坪田",
+    "latitude": 34.05,
+    "longitude": 139.55,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "068",
+      "1957": "048",
+      "1958": "028",
+      "1968": "008",
+      "1999": "320"
+    },
+    "sourceLine": 163
+  },
+  {
+    "code": "32003",
+    "name": "八丈島八重根",
+    "latitude": 33.1,
+    "longitude": 139.78333333333333,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "068",
+      "1957": "048",
+      "1958": "028",
+      "1968": "008",
+      "1999": "320"
+    },
+    "sourceLine": 164
+  },
+  {
+    "code": "32004",
+    "name": "神津島神津島港",
+    "latitude": 34.21666666666667,
+    "longitude": 139.13333333333333,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "068",
+      "1957": "048",
+      "1958": "028",
+      "1968": "008",
+      "1999": "320"
+    },
+    "sourceLine": 165
+  },
+  {
+    "code": "32005",
+    "name": "三宅島阿古",
+    "latitude": 34.06666666666667,
+    "longitude": 139.48333333333332,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "068",
+      "1957": "048",
+      "1958": "028",
+      "1968": "008",
+      "1999": "320"
+    },
+    "sourceLine": 166
+  },
+  {
+    "code": "32006",
+    "name": "八丈島神湊",
+    "latitude": 33.13333333333333,
+    "longitude": 139.8,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "068",
+      "1957": "048",
+      "1958": "028",
+      "1968": "008",
+      "1999": "320"
+    },
+    "sourceLine": 167
+  },
+  {
+    "code": "32101",
+    "name": "父島二見",
+    "latitude": 27.1,
+    "longitude": 142.2,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": "000",
+      "1968": "000",
+      "1999": "321"
+    },
+    "sourceLine": 168
+  },
+  {
+    "code": "32102",
+    "name": "南鳥島",
+    "latitude": 24.283333333333335,
+    "longitude": 153.98333333333332,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": "000",
+      "1968": "000",
+      "1999": "321"
+    },
+    "sourceLine": 169
+  },
+  {
+    "code": "33000",
+    "name": "小田原",
+    "latitude": 35.233333333333334,
+    "longitude": 139.15,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "330"
+    },
+    "sourceLine": 170
+  },
+  {
+    "code": "33030",
+    "name": "三浦市油壺",
+    "latitude": 35.166666666666664,
+    "longitude": 139.61666666666667,
+    "organization": "国土地理院",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "330"
+    },
+    "sourceLine": 171
+  },
+  {
+    "code": "33001",
+    "name": "三浦市三崎漁港",
+    "latitude": 35.13333333333333,
+    "longitude": 139.61666666666667,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "330"
+    },
+    "sourceLine": 172
+  },
+  {
+    "code": "33080",
+    "name": "神奈川沖４０ｋｍ",
+    "latitude": 34.8,
+    "longitude": 139.6,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "330"
+    },
+    "sourceLine": 173
+  },
+  {
+    "code": "33095",
+    "name": "神奈川相模湾沖",
+    "latitude": 35.06666666666667,
+    "longitude": 139.4,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "330"
+    },
+    "sourceLine": 174
+  },
+  {
+    "code": "34001",
+    "name": "新潟",
+    "latitude": 37.93333333333333,
+    "longitude": 139.06666666666666,
+    "organization": "北陸地方整備局",
+    "forecastAreas": {
+      "1952": "066",
+      "1957": "046",
+      "1958": "026",
+      "1968": "006",
+      "1999": "340"
+    },
+    "sourceLine": 175
+  },
+  {
+    "code": "34003",
+    "name": "粟島",
+    "latitude": 38.46666666666667,
+    "longitude": 139.25,
+    "organization": "海上保安庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "340"
+    },
+    "sourceLine": 176
+  },
+  {
+    "code": "34030",
+    "name": "柏崎市鯨波",
+    "latitude": 37.35,
+    "longitude": 138.51666666666668,
+    "organization": "国土地理院",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "340"
+    },
+    "sourceLine": 177
+  },
+  {
+    "code": "34101",
+    "name": "両津市鷲崎",
+    "latitude": 38.31666666666667,
+    "longitude": 138.51666666666668,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "066",
+      "1957": "046",
+      "1958": "026",
+      "1968": "006",
+      "1999": "341"
+    },
+    "sourceLine": 178
+  },
+  {
+    "code": "34102",
+    "name": "佐渡市鷲崎",
+    "latitude": 38.31666666666667,
+    "longitude": 138.51666666666668,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "341"
+    },
+    "sourceLine": 179
+  },
+  {
+    "code": "34103",
+    "name": "佐渡市鷲崎",
+    "latitude": 38.31666666666667,
+    "longitude": 138.51666666666668,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "341"
+    },
+    "sourceLine": 180
+  },
+  {
+    "code": "35001",
+    "name": "富山",
+    "latitude": 36.766666666666666,
+    "longitude": 137.21666666666667,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "070",
+      "1957": "050",
+      "1958": "026",
+      "1968": "006",
+      "1999": "350"
+    },
+    "sourceLine": 181
+  },
+  {
+    "code": "35021",
+    "name": "伏木富山港新湊",
+    "latitude": 36.78333333333333,
+    "longitude": 137.11666666666667,
+    "organization": "北陸地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "350"
+    },
+    "sourceLine": 182
+  },
+  {
+    "code": "36001",
+    "name": "珠洲市長橋",
+    "latitude": 37.5,
+    "longitude": 137.15,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "070",
+      "1957": "050",
+      "1958": "026",
+      "1968": "006",
+      "1999": "360"
+    },
+    "sourceLine": 183
+  },
+  {
+    "code": "36020",
+    "name": "輪島港",
+    "latitude": 37.4,
+    "longitude": 136.9,
+    "organization": "北陸地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "360"
+    },
+    "sourceLine": 184
+  },
+  {
+    "code": "36101",
+    "name": "金沢",
+    "latitude": 36.61666666666667,
+    "longitude": 136.6,
+    "organization": "北陸地方整備局",
+    "forecastAreas": {
+      "1952": "070",
+      "1957": "050",
+      "1958": "030",
+      "1968": "010",
+      "1999": "361"
+    },
+    "sourceLine": 186
+  },
+  {
+    "code": "37020",
+    "name": "敦賀港",
+    "latitude": 35.666666666666664,
+    "longitude": 136.06666666666666,
+    "organization": "北陸地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "370"
+    },
+    "sourceLine": 187
+  },
+  {
+    "code": "38001",
+    "name": "沼津市内浦",
+    "latitude": 35.016666666666666,
+    "longitude": 138.88333333333333,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "068",
+      "1957": "048",
+      "1958": "028",
+      "1968": "008",
+      "1999": "380"
+    },
+    "sourceLine": 188
+  },
+  {
+    "code": "38002",
+    "name": "清水",
+    "latitude": 35.016666666666666,
+    "longitude": 138.51666666666668,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "068",
+      "1957": "048",
+      "1958": "028",
+      "1968": "008",
+      "1999": "380"
+    },
+    "sourceLine": 189
+  },
+  {
+    "code": "38004",
+    "name": "南伊豆町石廊崎",
+    "latitude": 34.61666666666667,
+    "longitude": 138.85,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "068",
+      "1957": "048",
+      "1958": "028",
+      "1968": "008",
+      "1999": "380"
+    },
+    "sourceLine": 190
+  },
+  {
+    "code": "38005",
+    "name": "御前崎",
+    "latitude": 34.61666666666667,
+    "longitude": 138.21666666666667,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "068",
+      "1957": "048",
+      "1958": "028",
+      "1968": "008",
+      "1999": "380"
+    },
+    "sourceLine": 191
+  },
+  {
+    "code": "38006",
+    "name": "舞阪",
+    "latitude": 34.68333333333333,
+    "longitude": 137.61666666666667,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "068",
+      "1957": "048",
+      "1958": "028",
+      "1968": "008",
+      "1999": "380"
+    },
+    "sourceLine": 192
+  },
+  {
+    "code": "38020",
+    "name": "下田港",
+    "latitude": 34.68333333333333,
+    "longitude": 138.96666666666667,
+    "organization": "中部地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "380"
+    },
+    "sourceLine": 193
+  },
+  {
+    "code": "38030",
+    "name": "伊東",
+    "latitude": 34.9,
+    "longitude": 139.13333333333333,
+    "organization": "国土地理院",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "380"
+    },
+    "sourceLine": 194
+  },
+  {
+    "code": "38031",
+    "name": "西伊豆町田子",
+    "latitude": 34.8,
+    "longitude": 138.76666666666668,
+    "organization": "国土地理院",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "380"
+    },
+    "sourceLine": 195
+  },
+  {
+    "code": "38032",
+    "name": "焼津",
+    "latitude": 34.86666666666667,
+    "longitude": 138.33333333333334,
+    "organization": "国土地理院",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "380"
+    },
+    "sourceLine": 196
+  },
+  {
+    "code": "38070",
+    "name": "静岡沖５０ｋｍ",
+    "latitude": 34.21666666666667,
+    "longitude": 137.7,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "380"
+    },
+    "sourceLine": 197
+  },
+  {
+    "code": "38090",
+    "name": "静岡御前崎沖",
+    "latitude": 34.4,
+    "longitude": 138.28333333333333,
+    "organization": "中部地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "380"
+    },
+    "sourceLine": 198
+  },
+  {
+    "code": "39001",
+    "name": "田原市赤羽根",
+    "latitude": 34.6,
+    "longitude": 137.18333333333334,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "390"
+    },
+    "sourceLine": 199
+  },
+  {
+    "code": "39090",
+    "name": "伊勢湾口沖",
+    "latitude": 34.36666666666667,
+    "longitude": 137.11666666666667,
+    "organization": "中部地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "390"
+    },
+    "sourceLine": 200
+  },
+  {
+    "code": "39101",
+    "name": "名古屋",
+    "latitude": 35.083333333333336,
+    "longitude": 136.88333333333333,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "069",
+      "1957": "049",
+      "1958": "029",
+      "1968": "009",
+      "1999": "391"
+    },
+    "sourceLine": 201
+  },
+  {
+    "code": "39102",
+    "name": "半田市衣浦",
+    "latitude": 34.88333333333333,
+    "longitude": 136.95,
+    "organization": "愛知県",
+    "forecastAreas": {
+      "1952": "069",
+      "1957": "049",
+      "1958": "029",
+      "1968": "009",
+      "1999": "391"
+    },
+    "sourceLine": 202
+  },
+  {
+    "code": "39103",
+    "name": "四日市",
+    "latitude": 34.96666666666667,
+    "longitude": 136.63333333333333,
+    "organization": "四日市港管理組合",
+    "forecastAreas": {
+      "1952": "069",
+      "1957": "049",
+      "1958": "029",
+      "1968": "009",
+      "1999": "391"
+    },
+    "sourceLine": 203
+  },
+  {
+    "code": "39120",
+    "name": "豊橋市三河港",
+    "latitude": 34.733333333333334,
+    "longitude": 137.31666666666666,
+    "organization": "中部地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "391"
+    },
+    "sourceLine": 204
+  },
+  {
+    "code": "40001",
+    "name": "鳥羽",
+    "latitude": 34.483333333333334,
+    "longitude": 136.81666666666666,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "069",
+      "1957": "049",
+      "1958": "029",
+      "1968": "009",
+      "1999": "400"
+    },
+    "sourceLine": 205
+  },
+  {
+    "code": "40002",
+    "name": "尾鷲",
+    "latitude": 34.083333333333336,
+    "longitude": 136.2,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "069",
+      "1957": "049",
+      "1958": "029",
+      "1968": "009",
+      "1999": "400"
+    },
+    "sourceLine": 206
+  },
+  {
+    "code": "40003",
+    "name": "熊野市遊木",
+    "latitude": 33.93333333333333,
+    "longitude": 136.16666666666666,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "400"
+    },
+    "sourceLine": 207
+  },
+  {
+    "code": "40050",
+    "name": "三重南東沖９０ｋｍＡ",
+    "latitude": 33.36666666666667,
+    "longitude": 136.91666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "400"
+    },
+    "sourceLine": 208
+  },
+  {
+    "code": "40060",
+    "name": "三重南東沖８０ｋｍＡ",
+    "latitude": 33.766666666666666,
+    "longitude": 137.58333333333334,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "400"
+    },
+    "sourceLine": 209
+  },
+  {
+    "code": "40061",
+    "name": "三重南東沖８０ｋｍＢ",
+    "latitude": 33.483333333333334,
+    "longitude": 136.93333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "400"
+    },
+    "sourceLine": 210
+  },
+  {
+    "code": "40062",
+    "name": "三重南東沖８０ｋｍＣ",
+    "latitude": 33.36666666666667,
+    "longitude": 136.8,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "400"
+    },
+    "sourceLine": 211
+  },
+  {
+    "code": "40063",
+    "name": "三重南東沖７０ｋｍＡ",
+    "latitude": 33.46666666666667,
+    "longitude": 136.8,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "400"
+    },
+    "sourceLine": 212
+  },
+  {
+    "code": "40070",
+    "name": "三重南東沖６０ｋｍＡ",
+    "latitude": 33.85,
+    "longitude": 137.36666666666667,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "400"
+    },
+    "sourceLine": 213
+  },
+  {
+    "code": "40071",
+    "name": "三重南東沖６０ｋｍＢ",
+    "latitude": 33.65,
+    "longitude": 136.83333333333334,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "400"
+    },
+    "sourceLine": 214
+  },
+  {
+    "code": "40072",
+    "name": "三重南東沖５０ｋｍＡ",
+    "latitude": 33.65,
+    "longitude": 136.6,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "400"
+    },
+    "sourceLine": 215
+  },
+  {
+    "code": "40080",
+    "name": "三重南東沖４０ｋｍＡ",
+    "latitude": 33.75,
+    "longitude": 136.65,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "400"
+    },
+    "sourceLine": 216
+  },
+  {
+    "code": "40081",
+    "name": "三重南東沖４０ｋｍＢ",
+    "latitude": 33.68333333333333,
+    "longitude": 136.46666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "400"
+    },
+    "sourceLine": 217
+  },
+  {
+    "code": "40082",
+    "name": "三重南東沖３０ｋｍＡ",
+    "latitude": 33.8,
+    "longitude": 136.55,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "400"
+    },
+    "sourceLine": 218
+  },
+  {
+    "code": "40090",
+    "name": "三重尾鷲沖",
+    "latitude": 33.9,
+    "longitude": 136.26666666666668,
+    "organization": "中部地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "400"
+    },
+    "sourceLine": 219
+  },
+  {
+    "code": "50001",
+    "name": "舞鶴",
+    "latitude": 35.483333333333334,
+    "longitude": 135.38333333333333,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "073",
+      "1957": "053",
+      "1958": "033",
+      "1968": "013",
+      "1999": "500"
+    },
+    "sourceLine": 220
+  },
+  {
+    "code": "51001",
+    "name": "大阪天保山",
+    "latitude": 34.65,
+    "longitude": 135.43333333333334,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "071",
+      "1957": "051",
+      "1958": "031",
+      "1968": "011",
+      "1999": "510"
+    },
+    "sourceLine": 221
+  },
+  {
+    "code": "51002",
+    "name": "岬町淡輪",
+    "latitude": 34.333333333333336,
+    "longitude": 135.18333333333334,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "071",
+      "1957": "051",
+      "1958": "031",
+      "1968": "011",
+      "1999": "510"
+    },
+    "sourceLine": 222
+  },
+  {
+    "code": "52001",
+    "name": "豊岡市津居山",
+    "latitude": 35.65,
+    "longitude": 134.83333333333334,
+    "organization": "兵庫県",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "520"
+    },
+    "sourceLine": 223
+  },
+  {
+    "code": "52101",
+    "name": "神戸",
+    "latitude": 34.68333333333333,
+    "longitude": 135.18333333333334,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "071",
+      "1957": "051",
+      "1958": "031",
+      "1968": "011",
+      "1999": "521"
+    },
+    "sourceLine": 224
+  },
+  {
+    "code": "52102",
+    "name": "姫路",
+    "latitude": 34.78333333333333,
+    "longitude": 134.66666666666666,
+    "organization": "兵庫県",
+    "forecastAreas": {
+      "1952": "071",
+      "1957": "051",
+      "1958": "031",
+      "1968": "011",
+      "1999": "521"
+    },
+    "sourceLine": 225
+  },
+  {
+    "code": "52201",
+    "name": "洲本",
+    "latitude": 34.333333333333336,
+    "longitude": 134.9,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "071",
+      "1957": "051",
+      "1958": "031",
+      "1968": "011",
+      "1999": "522"
+    },
+    "sourceLine": 226
+  },
+  {
+    "code": "52202",
+    "name": "洲本",
+    "latitude": 34.35,
+    "longitude": 134.9,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "522"
+    },
+    "sourceLine": 227
+  },
+  {
+    "code": "53001",
+    "name": "那智勝浦町浦神",
+    "latitude": 33.56666666666667,
+    "longitude": 135.9,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "071",
+      "1957": "051",
+      "1958": "031",
+      "1968": "011",
+      "1999": "530"
+    },
+    "sourceLine": 228
+  },
+  {
+    "code": "53002",
+    "name": "串本町袋港",
+    "latitude": 33.483333333333334,
+    "longitude": 135.76666666666668,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "071",
+      "1957": "051",
+      "1958": "031",
+      "1968": "011",
+      "1999": "530"
+    },
+    "sourceLine": 229
+  },
+  {
+    "code": "53003",
+    "name": "白浜町細野",
+    "latitude": 33.68333333333333,
+    "longitude": 135.38333333333333,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "071",
+      "1957": "051",
+      "1958": "031",
+      "1968": "011",
+      "1999": "530"
+    },
+    "sourceLine": 230
+  },
+  {
+    "code": "53004",
+    "name": "和歌山",
+    "latitude": 34.21666666666667,
+    "longitude": 135.15,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "071",
+      "1957": "051",
+      "1958": "031",
+      "1968": "011",
+      "1999": "530"
+    },
+    "sourceLine": 231
+  },
+  {
+    "code": "53005",
+    "name": "御坊",
+    "latitude": 33.85,
+    "longitude": 135.16666666666666,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 232
+  },
+  {
+    "code": "53006",
+    "name": "御坊市祓井戸",
+    "latitude": 33.85,
+    "longitude": 135.16666666666666,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 233
+  },
+  {
+    "code": "53007",
+    "name": "白浜町堅田",
+    "latitude": 33.68333333333333,
+    "longitude": 135.38333333333333,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 234
+  },
+  {
+    "code": "53060",
+    "name": "和歌山沖８０ｋｍＡ",
+    "latitude": 33.21666666666667,
+    "longitude": 136.68333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 235
+  },
+  {
+    "code": "53061",
+    "name": "和歌山沖８０ｋｍＢ",
+    "latitude": 33.166666666666664,
+    "longitude": 136.58333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 236
+  },
+  {
+    "code": "53062",
+    "name": "和歌山沖７０ｋｍＡ",
+    "latitude": 33.3,
+    "longitude": 136.6,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 237
+  },
+  {
+    "code": "53063",
+    "name": "和歌山沖７０ｋｍＢ",
+    "latitude": 33.233333333333334,
+    "longitude": 136.56666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 238
+  },
+  {
+    "code": "53064",
+    "name": "和歌山沖８０ｋｍＣ",
+    "latitude": 32.88333333333333,
+    "longitude": 135.3,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 239
+  },
+  {
+    "code": "53065",
+    "name": "和歌山沖８０ｋｍＤ",
+    "latitude": 32.85,
+    "longitude": 135.18333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 240
+  },
+  {
+    "code": "53066",
+    "name": "和歌山沖８０ｋｍＥ",
+    "latitude": 32.9,
+    "longitude": 135.15,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 241
+  },
+  {
+    "code": "53067",
+    "name": "和歌山沖７０ｋｍＣ",
+    "latitude": 32.8,
+    "longitude": 135.76666666666668,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 242
+  },
+  {
+    "code": "53068",
+    "name": "和歌山沖７０ｋｍＤ",
+    "latitude": 32.86666666666667,
+    "longitude": 135.66666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 243
+  },
+  {
+    "code": "53069",
+    "name": "和歌山沖７０ｋｍＥ",
+    "latitude": 32.983333333333334,
+    "longitude": 135.23333333333332,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 244
+  },
+  {
+    "code": "53070",
+    "name": "和歌山沖５０ｋｍＡ",
+    "latitude": 33.483333333333334,
+    "longitude": 136.45,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 245
+  },
+  {
+    "code": "53071",
+    "name": "和歌山沖５０ｋｍＢ",
+    "latitude": 33.38333333333333,
+    "longitude": 136.38333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 246
+  },
+  {
+    "code": "53072",
+    "name": "和歌山沖６０ｋｍＡ",
+    "latitude": 32.9,
+    "longitude": 135.83333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 247
+  },
+  {
+    "code": "53073",
+    "name": "和歌山沖６０ｋｍＢ",
+    "latitude": 32.93333333333333,
+    "longitude": 135.76666666666668,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 248
+  },
+  {
+    "code": "53074",
+    "name": "和歌山沖６０ｋｍＣ",
+    "latitude": 33.18333333333333,
+    "longitude": 135.1,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 249
+  },
+  {
+    "code": "53075",
+    "name": "和歌山沖５０ｋｍＣ",
+    "latitude": 33.03333333333333,
+    "longitude": 135.83333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 250
+  },
+  {
+    "code": "53076",
+    "name": "和歌山沖５０ｋｍＤ",
+    "latitude": 33.083333333333336,
+    "longitude": 135.41666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 251
+  },
+  {
+    "code": "53077",
+    "name": "和歌山沖５０ｋｍＥ",
+    "latitude": 33.233333333333334,
+    "longitude": 135.16666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 252
+  },
+  {
+    "code": "53078",
+    "name": "和歌山沖５０ｋｍＦ",
+    "latitude": 33.28333333333333,
+    "longitude": 134.98333333333332,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 253
+  },
+  {
+    "code": "53079",
+    "name": "和歌山沖４０ｋｍＡ",
+    "latitude": 33.333333333333336,
+    "longitude": 136.26666666666668,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 254
+  },
+  {
+    "code": "53080",
+    "name": "和歌山沖３０ｋｍＡ",
+    "latitude": 33.55,
+    "longitude": 136.33333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 255
+  },
+  {
+    "code": "53081",
+    "name": "和歌山沖３０ｋｍＢ",
+    "latitude": 33.45,
+    "longitude": 136.25,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 256
+  },
+  {
+    "code": "53082",
+    "name": "和歌山沖４０ｋｍＢ",
+    "latitude": 33.15,
+    "longitude": 135.96666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 257
+  },
+  {
+    "code": "53083",
+    "name": "和歌山沖４０ｋｍＣ",
+    "latitude": 33.13333333333333,
+    "longitude": 135.86666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 258
+  },
+  {
+    "code": "53084",
+    "name": "和歌山沖４０ｋｍＤ",
+    "latitude": 33.083333333333336,
+    "longitude": 135.71666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 259
+  },
+  {
+    "code": "53085",
+    "name": "和歌山沖４０ｋｍＥ",
+    "latitude": 33.13333333333333,
+    "longitude": 135.51666666666668,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 260
+  },
+  {
+    "code": "53086",
+    "name": "和歌山沖４０ｋｍＦ",
+    "latitude": 33.18333333333333,
+    "longitude": 135.33333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 261
+  },
+  {
+    "code": "53087",
+    "name": "和歌山沖４０ｋｍＧ",
+    "latitude": 33.31666666666667,
+    "longitude": 135.06666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 262
+  },
+  {
+    "code": "53088",
+    "name": "和歌山沖３０ｋｍＣ",
+    "latitude": 33.166666666666664,
+    "longitude": 135.75,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 263
+  },
+  {
+    "code": "53089",
+    "name": "和歌山沖３０ｋｍＤ",
+    "latitude": 33.233333333333334,
+    "longitude": 135.46666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 264
+  },
+  {
+    "code": "53090",
+    "name": "和歌山白浜沖",
+    "latitude": 33.65,
+    "longitude": 135.15,
+    "organization": "近畿地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "530"
+    },
+    "sourceLine": 265
+  },
+  {
+    "code": "54001",
+    "name": "境港市境",
+    "latitude": 35.55,
+    "longitude": 133.25,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "073",
+      "1957": "053",
+      "1958": "033",
+      "1968": "013",
+      "1999": "540"
+    },
+    "sourceLine": 266
+  },
+  {
+    "code": "54030",
+    "name": "岩美町田後",
+    "latitude": 35.6,
+    "longitude": 134.31666666666666,
+    "organization": "国土地理院",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "540"
+    },
+    "sourceLine": 267
+  },
+  {
+    "code": "55001",
+    "name": "浜田",
+    "latitude": 34.9,
+    "longitude": 132.06666666666666,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "073",
+      "1957": "053",
+      "1958": "033",
+      "1968": "013",
+      "1999": "550"
+    },
+    "sourceLine": 268
+  },
+  {
+    "code": "55101",
+    "name": "隠岐西郷",
+    "latitude": 36.2,
+    "longitude": 133.33333333333334,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "073",
+      "1957": "053",
+      "1958": "033",
+      "1968": "013",
+      "1999": "551"
+    },
+    "sourceLine": 269
+  },
+  {
+    "code": "56001",
+    "name": "玉野市宇野",
+    "latitude": 34.483333333333334,
+    "longitude": 133.95,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "072",
+      "1957": "052",
+      "1958": "032",
+      "1968": "012",
+      "1999": "560"
+    },
+    "sourceLine": 270
+  },
+  {
+    "code": "57001",
+    "name": "広島",
+    "latitude": 34.35,
+    "longitude": 132.46666666666667,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "072",
+      "1957": "052",
+      "1958": "032",
+      "1968": "012",
+      "1999": "570"
+    },
+    "sourceLine": 271
+  },
+  {
+    "code": "57002",
+    "name": "呉",
+    "latitude": 34.233333333333334,
+    "longitude": 132.55,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "072",
+      "1957": "052",
+      "1958": "032",
+      "1968": "012",
+      "1999": "570"
+    },
+    "sourceLine": 272
+  },
+  {
+    "code": "58001",
+    "name": "小松島",
+    "latitude": 34.016666666666666,
+    "longitude": 134.58333333333334,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "071",
+      "1957": "055",
+      "1958": "035",
+      "1968": "015",
+      "1999": "580"
+    },
+    "sourceLine": 273
+  },
+  {
+    "code": "58002",
+    "name": "徳島由岐",
+    "latitude": 33.766666666666666,
+    "longitude": 134.6,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "580"
+    },
+    "sourceLine": 274
+  },
+  {
+    "code": "58070",
+    "name": "徳島沖５０ｋｍＡ",
+    "latitude": 33.333333333333336,
+    "longitude": 134.86666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "580"
+    },
+    "sourceLine": 275
+  },
+  {
+    "code": "58071",
+    "name": "徳島沖５０ｋｍＢ",
+    "latitude": 33.25,
+    "longitude": 134.76666666666668,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "580"
+    },
+    "sourceLine": 276
+  },
+  {
+    "code": "58080",
+    "name": "徳島沖４０ｋｍＡ",
+    "latitude": 33.416666666666664,
+    "longitude": 134.75,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "580"
+    },
+    "sourceLine": 277
+  },
+  {
+    "code": "58081",
+    "name": "徳島沖４０ｋｍＢ",
+    "latitude": 33.31666666666667,
+    "longitude": 134.66666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "580"
+    },
+    "sourceLine": 278
+  },
+  {
+    "code": "58090",
+    "name": "徳島海陽沖",
+    "latitude": 33.46666666666667,
+    "longitude": 134.48333333333332,
+    "organization": "四国地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "580"
+    },
+    "sourceLine": 279
+  },
+  {
+    "code": "59001",
+    "name": "高松",
+    "latitude": 34.35,
+    "longitude": 134.05,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "072",
+      "1957": "054",
+      "1958": "034",
+      "1968": "014",
+      "1999": "590"
+    },
+    "sourceLine": 280
+  },
+  {
+    "code": "59020",
+    "name": "坂出市与島港",
+    "latitude": 34.38333333333333,
+    "longitude": 133.81666666666666,
+    "organization": "四国地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "590"
+    },
+    "sourceLine": 281
+  },
+  {
+    "code": "59022",
+    "name": "多度津港",
+    "latitude": 34.28333333333333,
+    "longitude": 133.75,
+    "organization": "四国地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "590"
+    },
+    "sourceLine": 282
+  },
+  {
+    "code": "60001",
+    "name": "宇和島",
+    "latitude": 33.233333333333334,
+    "longitude": 132.55,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "071",
+      "1957": "055",
+      "1958": "035",
+      "1968": "015",
+      "1999": "600"
+    },
+    "sourceLine": 283
+  },
+  {
+    "code": "60101",
+    "name": "松山",
+    "latitude": 33.86666666666667,
+    "longitude": 132.71666666666667,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "072",
+      "1957": "054",
+      "1958": "034",
+      "1968": "014",
+      "1999": "601"
+    },
+    "sourceLine": 284
+  },
+  {
+    "code": "60120",
+    "name": "今治市小島",
+    "latitude": 34.13333333333333,
+    "longitude": 132.98333333333332,
+    "organization": "四国地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "601"
+    },
+    "sourceLine": 285
+  },
+  {
+    "code": "60121",
+    "name": "今治市馬島",
+    "latitude": 34.11666666666667,
+    "longitude": 132.98333333333332,
+    "organization": "四国地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "601"
+    },
+    "sourceLine": 286
+  },
+  {
+    "code": "61001",
+    "name": "室戸市室戸岬",
+    "latitude": 33.266666666666666,
+    "longitude": 134.16666666666666,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "071",
+      "1957": "055",
+      "1958": "035",
+      "1968": "015",
+      "1999": "610"
+    },
+    "sourceLine": 287
+  },
+  {
+    "code": "61002",
+    "name": "高知",
+    "latitude": 33.5,
+    "longitude": 133.56666666666666,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "071",
+      "1957": "055",
+      "1958": "035",
+      "1968": "015",
+      "1999": "610"
+    },
+    "sourceLine": 288
+  },
+  {
+    "code": "61003",
+    "name": "土佐清水",
+    "latitude": 32.78333333333333,
+    "longitude": 132.96666666666667,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "071",
+      "1957": "055",
+      "1958": "035",
+      "1968": "015",
+      "1999": "610"
+    },
+    "sourceLine": 289
+  },
+  {
+    "code": "61020",
+    "name": "須崎港",
+    "latitude": 33.38333333333333,
+    "longitude": 133.3,
+    "organization": "四国地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "610"
+    },
+    "sourceLine": 290
+  },
+  {
+    "code": "61030",
+    "name": "中土佐町久礼港",
+    "latitude": 33.333333333333336,
+    "longitude": 133.25,
+    "organization": "国土地理院",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "610"
+    },
+    "sourceLine": 291
+  },
+  {
+    "code": "61050",
+    "name": "高知沖１００ｋｍＡ",
+    "latitude": 32.38333333333333,
+    "longitude": 134.48333333333332,
+    "organization": "海洋研究開発機構",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "610"
+    },
+    "sourceLine": 292
+  },
+  {
+    "code": "61060",
+    "name": "高知沖７０ｋｍＡ",
+    "latitude": 32.65,
+    "longitude": 134.36666666666667,
+    "organization": "海洋研究開発機構",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "610"
+    },
+    "sourceLine": 293
+  },
+  {
+    "code": "61061",
+    "name": "高知沖８０ｋｍＡ",
+    "latitude": 32.63333333333333,
+    "longitude": 134.51666666666668,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "610"
+    },
+    "sourceLine": 294
+  },
+  {
+    "code": "61062",
+    "name": "高知沖７０ｋｍＢ",
+    "latitude": 32.71666666666667,
+    "longitude": 134.6,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "610"
+    },
+    "sourceLine": 295
+  },
+  {
+    "code": "61063",
+    "name": "高知沖７０ｋｍＣ",
+    "latitude": 32.68333333333333,
+    "longitude": 134.43333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "610"
+    },
+    "sourceLine": 296
+  },
+  {
+    "code": "61070",
+    "name": "高知沖６０ｋｍＡ",
+    "latitude": 32.766666666666666,
+    "longitude": 134.51666666666668,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "610"
+    },
+    "sourceLine": 297
+  },
+  {
+    "code": "61090",
+    "name": "高知足摺岬沖",
+    "latitude": 32.63333333333333,
+    "longitude": 133.15,
+    "organization": "四国地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "610"
+    },
+    "sourceLine": 298
+  },
+  {
+    "code": "61091",
+    "name": "高知室戸岬沖",
+    "latitude": 33.083333333333336,
+    "longitude": 134.18333333333334,
+    "organization": "四国地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "610"
+    },
+    "sourceLine": 299
+  },
+  {
+    "code": "70021",
+    "name": "下関市南風泊港",
+    "latitude": 33.95,
+    "longitude": 130.88333333333333,
+    "organization": "九州地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "700"
+    },
+    "sourceLine": 300
+  },
+  {
+    "code": "70101",
+    "name": "下関市彦島弟子待",
+    "latitude": 33.93333333333333,
+    "longitude": 130.93333333333334,
+    "organization": "九州地方整備局",
+    "forecastAreas": {
+      "1952": "074",
+      "1957": "056",
+      "1958": "036",
+      "1968": "016",
+      "1999": "701"
+    },
+    "sourceLine": 301
+  },
+  {
+    "code": "70102",
+    "name": "徳山",
+    "latitude": 34.03333333333333,
+    "longitude": 131.8,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "074",
+      "1957": "076",
+      "1958": "036",
+      "1968": "016",
+      "1999": "701"
+    },
+    "sourceLine": 302
+  },
+  {
+    "code": "70120",
+    "name": "宇部港",
+    "latitude": 33.93333333333333,
+    "longitude": 131.25,
+    "organization": "中国地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "701"
+    },
+    "sourceLine": 303
+  },
+  {
+    "code": "70121",
+    "name": "三田尻中関港",
+    "latitude": 34.03333333333333,
+    "longitude": 131.58333333333334,
+    "organization": "中国地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "701"
+    },
+    "sourceLine": 304
+  },
+  {
+    "code": "70122",
+    "name": "下関港長府",
+    "latitude": 34.016666666666666,
+    "longitude": 131,
+    "organization": "九州地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "701"
+    },
+    "sourceLine": 305
+  },
+  {
+    "code": "71001",
+    "name": "北九州市門司",
+    "latitude": 33.95,
+    "longitude": 130.96666666666667,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "074",
+      "1957": "076",
+      "1958": "036",
+      "1968": "016",
+      "1999": "710"
+    },
+    "sourceLine": 306
+  },
+  {
+    "code": "71002",
+    "name": "北九州市門司",
+    "latitude": 33.95,
+    "longitude": 130.95,
+    "organization": "九州地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "710"
+    },
+    "sourceLine": 307
+  },
+  {
+    "code": "71021",
+    "name": "苅田港",
+    "latitude": 33.78333333333333,
+    "longitude": 130.98333333333332,
+    "organization": "九州地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "710"
+    },
+    "sourceLine": 308
+  },
+  {
+    "code": "71022",
+    "name": "北九州港青浜",
+    "latitude": 33.95,
+    "longitude": 131.01666666666668,
+    "organization": "九州地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "710"
+    },
+    "sourceLine": 309
+  },
+  {
+    "code": "71101",
+    "name": "福岡市博多",
+    "latitude": 33.61666666666667,
+    "longitude": 130.4,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "075",
+      "1957": "077",
+      "1958": "037",
+      "1968": "017",
+      "1999": "711"
+    },
+    "sourceLine": 310
+  },
+  {
+    "code": "71120",
+    "name": "北九州港日明",
+    "latitude": 33.916666666666664,
+    "longitude": 130.88333333333333,
+    "organization": "九州地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "711"
+    },
+    "sourceLine": 311
+  },
+  {
+    "code": "71201",
+    "name": "大牟田市三池",
+    "latitude": 33.016666666666666,
+    "longitude": 130.41666666666666,
+    "organization": "日本コークス工業株式会社",
+    "forecastAreas": {
+      "1952": "075",
+      "1957": "057",
+      "1958": "037",
+      "1968": "017",
+      "1999": "712"
+    },
+    "sourceLine": 312
+  },
+  {
+    "code": "71202",
+    "name": "太良町大浦野崎",
+    "latitude": 32.983333333333334,
+    "longitude": 130.21666666666667,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "075",
+      "1957": "057",
+      "1958": "037",
+      "1968": "017",
+      "1999": "712"
+    },
+    "sourceLine": 313
+  },
+  {
+    "code": "71203",
+    "name": "三角",
+    "latitude": 32.61666666666667,
+    "longitude": 130.45,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "075",
+      "1957": "057",
+      "1958": "037",
+      "1968": "017",
+      "1999": "712"
+    },
+    "sourceLine": 314
+  },
+  {
+    "code": "71220",
+    "name": "八代港",
+    "latitude": 32.516666666666666,
+    "longitude": 130.56666666666666,
+    "organization": "九州地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "712"
+    },
+    "sourceLine": 315
+  },
+  {
+    "code": "71221",
+    "name": "天草市本渡港",
+    "latitude": 32.43333333333333,
+    "longitude": 130.21666666666667,
+    "organization": "九州地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "712"
+    },
+    "sourceLine": 316
+  },
+  {
+    "code": "71222",
+    "name": "熊本港",
+    "latitude": 32.75,
+    "longitude": 130.56666666666666,
+    "organization": "九州地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "712"
+    },
+    "sourceLine": 317
+  },
+  {
+    "code": "72020",
+    "name": "唐津港",
+    "latitude": 33.46666666666667,
+    "longitude": 129.96666666666667,
+    "organization": "九州地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "720"
+    },
+    "sourceLine": 318
+  },
+  {
+    "code": "72030",
+    "name": "玄海町仮屋",
+    "latitude": 33.46666666666667,
+    "longitude": 129.85,
+    "organization": "国土地理院",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "720"
+    },
+    "sourceLine": 319
+  },
+  {
+    "code": "73001",
+    "name": "長崎",
+    "latitude": 32.733333333333334,
+    "longitude": 129.86666666666667,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "075",
+      "1957": "057",
+      "1958": "037",
+      "1968": "017",
+      "1999": "730"
+    },
+    "sourceLine": 320
+  },
+  {
+    "code": "73002",
+    "name": "口之津",
+    "latitude": 32.6,
+    "longitude": 130.2,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "075",
+      "1957": "057",
+      "1958": "037",
+      "1968": "017",
+      "1999": "730"
+    },
+    "sourceLine": 321
+  },
+  {
+    "code": "73003",
+    "name": "福江島福江港",
+    "latitude": 32.7,
+    "longitude": 128.85,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "075",
+      "1957": "057",
+      "1958": "037",
+      "1968": "017",
+      "1999": "730"
+    },
+    "sourceLine": 322
+  },
+  {
+    "code": "73004",
+    "name": "佐世保",
+    "latitude": 33.15,
+    "longitude": 129.71666666666667,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "075",
+      "1957": "077",
+      "1958": "037",
+      "1968": "017",
+      "1999": "730"
+    },
+    "sourceLine": 323
+  },
+  {
+    "code": "73020",
+    "name": "長崎港皇后",
+    "latitude": 32.71666666666667,
+    "longitude": 129.83333333333334,
+    "organization": "九州地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "730"
+    },
+    "sourceLine": 324
+  },
+  {
+    "code": "73021",
+    "name": "平戸市田平港",
+    "latitude": 33.36666666666667,
+    "longitude": 129.58333333333334,
+    "organization": "九州地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "730"
+    },
+    "sourceLine": 325
+  },
+  {
+    "code": "73101",
+    "name": "対馬美津島",
+    "latitude": 34.266666666666666,
+    "longitude": 129.31666666666666,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "075",
+      "1957": "057",
+      "1958": "037",
+      "1968": "017",
+      "1999": "731"
+    },
+    "sourceLine": 326
+  },
+  {
+    "code": "73102",
+    "name": "対馬比田勝",
+    "latitude": 34.65,
+    "longitude": 129.48333333333332,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "731"
+    },
+    "sourceLine": 327
+  },
+  {
+    "code": "73110",
+    "name": "対馬市厳原",
+    "latitude": 34.2,
+    "longitude": 129.3,
+    "organization": "海上保安庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "731"
+    },
+    "sourceLine": 328
+  },
+  {
+    "code": "73120",
+    "name": "壱岐島郷ノ浦港",
+    "latitude": 33.75,
+    "longitude": 129.68333333333334,
+    "organization": "九州地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "731"
+    },
+    "sourceLine": 329
+  },
+  {
+    "code": "74000",
+    "name": "苓北町都呂々",
+    "latitude": 32.46666666666667,
+    "longitude": 130.03333333333333,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "740"
+    },
+    "sourceLine": 330
+  },
+  {
+    "code": "75001",
+    "name": "大分",
+    "latitude": 33.266666666666666,
+    "longitude": 131.68333333333334,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "074",
+      "1957": "076",
+      "1958": "036",
+      "1968": "016",
+      "1999": "750"
+    },
+    "sourceLine": 331
+  },
+  {
+    "code": "75020",
+    "name": "別府港",
+    "latitude": 33.3,
+    "longitude": 131.5,
+    "organization": "九州地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "750"
+    },
+    "sourceLine": 332
+  },
+  {
+    "code": "75100",
+    "name": "佐伯市松浦",
+    "latitude": 32.95,
+    "longitude": 131.96666666666667,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "751"
+    },
+    "sourceLine": 333
+  },
+  {
+    "code": "76001",
+    "name": "日向市細島",
+    "latitude": 32.45,
+    "longitude": 131.66666666666666,
+    "organization": "宮崎県",
+    "forecastAreas": {
+      "1952": "074",
+      "1957": "056",
+      "1958": "036",
+      "1968": "016",
+      "1999": "760"
+    },
+    "sourceLine": 334
+  },
+  {
+    "code": "76002",
+    "name": "日南市油津",
+    "latitude": 31.583333333333332,
+    "longitude": 131.41666666666666,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "074",
+      "1957": "056",
+      "1958": "036",
+      "1968": "016",
+      "1999": "760"
+    },
+    "sourceLine": 335
+  },
+  {
+    "code": "76020",
+    "name": "宮崎港",
+    "latitude": 31.9,
+    "longitude": 131.45,
+    "organization": "九州地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "760"
+    },
+    "sourceLine": 336
+  },
+  {
+    "code": "76090",
+    "name": "宮崎日向沖",
+    "latitude": 32.38333333333333,
+    "longitude": 131.91666666666666,
+    "organization": "九州地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "760"
+    },
+    "sourceLine": 337
+  },
+  {
+    "code": "77001",
+    "name": "佐多町大泊",
+    "latitude": 31.016666666666666,
+    "longitude": 130.68333333333334,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "074",
+      "1957": "076",
+      "1958": "036",
+      "1968": "016",
+      "1999": "770"
+    },
+    "sourceLine": 338
+  },
+  {
+    "code": "77002",
+    "name": "南大隅町大泊",
+    "latitude": 31.016666666666666,
+    "longitude": 130.68333333333334,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "074",
+      "1957": "076",
+      "1958": "036",
+      "1968": "016",
+      "1999": "770"
+    },
+    "sourceLine": 339
+  },
+  {
+    "code": "77020",
+    "name": "志布志港",
+    "latitude": 31.483333333333334,
+    "longitude": 131.11666666666667,
+    "organization": "九州地方整備局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "770"
+    },
+    "sourceLine": 340
+  },
+  {
+    "code": "77101",
+    "name": "種子島田之脇",
+    "latitude": 30.7,
+    "longitude": 131.06666666666666,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "000",
+      "1957": "000",
+      "1958": "036",
+      "1968": "016",
+      "1999": "771"
+    },
+    "sourceLine": 341
+  },
+  {
+    "code": "77102",
+    "name": "種子島西之表",
+    "latitude": 30.733333333333334,
+    "longitude": 131,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "000",
+      "1957": "000",
+      "1958": "036",
+      "1968": "016",
+      "1999": "771"
+    },
+    "sourceLine": 342
+  },
+  {
+    "code": "77103",
+    "name": "種子島熊野",
+    "latitude": 30.466666666666665,
+    "longitude": 130.96666666666667,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "771"
+    },
+    "sourceLine": 343
+  },
+  {
+    "code": "77201",
+    "name": "名瀬市小湊",
+    "latitude": 28.316666666666666,
+    "longitude": 129.53333333333333,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "000",
+      "1957": "000",
+      "1958": "000",
+      "1968": "016",
+      "1999": "772"
+    },
+    "sourceLine": 344
+  },
+  {
+    "code": "77202",
+    "name": "名瀬市名瀬",
+    "latitude": 28.383333333333333,
+    "longitude": 129.5,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "000",
+      "1957": "000",
+      "1958": "000",
+      "1968": "016",
+      "1999": "772"
+    },
+    "sourceLine": 345
+  },
+  {
+    "code": "77203",
+    "name": "中之島",
+    "latitude": 29.85,
+    "longitude": 129.85,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "000",
+      "1957": "000",
+      "1958": "000",
+      "1968": "016",
+      "1999": "772"
+    },
+    "sourceLine": 346
+  },
+  {
+    "code": "77204",
+    "name": "奄美市小湊",
+    "latitude": 28.316666666666666,
+    "longitude": 129.53333333333333,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "000",
+      "1957": "000",
+      "1958": "000",
+      "1968": "016",
+      "1999": "772"
+    },
+    "sourceLine": 347
+  },
+  {
+    "code": "77205",
+    "name": "奄美市名瀬",
+    "latitude": 28.4,
+    "longitude": 129.5,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "000",
+      "1957": "000",
+      "1958": "000",
+      "1968": "016",
+      "1999": "772"
+    },
+    "sourceLine": 348
+  },
+  {
+    "code": "77301",
+    "name": "鹿児島",
+    "latitude": 31.583333333333332,
+    "longitude": 130.56666666666666,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "075",
+      "1957": "057",
+      "1958": "037",
+      "1968": "017",
+      "1999": "773"
+    },
+    "sourceLine": 349
+  },
+  {
+    "code": "77302",
+    "name": "枕崎",
+    "latitude": 31.266666666666666,
+    "longitude": 130.3,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": "075",
+      "1957": "057",
+      "1958": "037",
+      "1968": "017",
+      "1999": "773"
+    },
+    "sourceLine": 350
+  },
+  {
+    "code": "77303",
+    "name": "鹿児島",
+    "latitude": 31.6,
+    "longitude": 130.56666666666666,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "773"
+    },
+    "sourceLine": 351
+  },
+  {
+    "code": "77330",
+    "name": "阿久根",
+    "latitude": 32.016666666666666,
+    "longitude": 130.18333333333334,
+    "organization": "国土地理院",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "773"
+    },
+    "sourceLine": 352
+  },
+  {
+    "code": "80001",
+    "name": "那覇",
+    "latitude": 26.216666666666665,
+    "longitude": 127.66666666666667,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": "018",
+      "1999": "800"
+    },
+    "sourceLine": 353
+  },
+  {
+    "code": "80003",
+    "name": "沖縄市中城湾港",
+    "latitude": 26.333333333333332,
+    "longitude": 127.83333333333333,
+    "organization": "沖縄総合事務局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": "018",
+      "1999": "800"
+    },
+    "sourceLine": 354
+  },
+  {
+    "code": "80030",
+    "name": "南城市安座真",
+    "latitude": 26.183333333333334,
+    "longitude": 127.81666666666666,
+    "organization": "国土地理院",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "800"
+    },
+    "sourceLine": 355
+  },
+  {
+    "code": "80102",
+    "name": "南大東漁港",
+    "latitude": 25.866666666666667,
+    "longitude": 131.23333333333332,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "801"
+    },
+    "sourceLine": 356
+  },
+  {
+    "code": "80201",
+    "name": "宮古島平良",
+    "latitude": 24.8,
+    "longitude": 125.28333333333333,
+    "organization": "沖縄総合事務局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": "018",
+      "1999": "802"
+    },
+    "sourceLine": 357
+  },
+  {
+    "code": "80202",
+    "name": "石垣島石垣港",
+    "latitude": 24.333333333333332,
+    "longitude": 124.15,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": "018",
+      "1999": "802"
+    },
+    "sourceLine": 358
+  },
+  {
+    "code": "80204",
+    "name": "与那国島久部良",
+    "latitude": 24.45,
+    "longitude": 122.95,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": "018",
+      "1999": "802"
+    },
+    "sourceLine": 359
+  },
+  {
+    "code": "80205",
+    "name": "石垣島石垣港",
+    "latitude": 24.333333333333332,
+    "longitude": 124.16666666666667,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": "018",
+      "1999": "802"
+    },
+    "sourceLine": 360
+  },
+  {
+    "code": "80206",
+    "name": "宮古島平良",
+    "latitude": 24.816666666666666,
+    "longitude": 125.28333333333333,
+    "organization": "沖縄総合事務局",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": "018",
+      "1999": "802"
+    },
+    "sourceLine": 361
+  },
+  {
+    "code": "91010",
+    "name": "釧路沖１１０ｋｍＡ",
+    "latitude": 42.06666666666667,
+    "longitude": 145.43333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 362
+  },
+  {
+    "code": "91011",
+    "name": "十勝沖１１０ｋｍＡ",
+    "latitude": 41.9,
+    "longitude": 144.7,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 363
+  },
+  {
+    "code": "91012",
+    "name": "十勝沖１２０ｋｍＡ",
+    "latitude": 41.65,
+    "longitude": 144.66666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 364
+  },
+  {
+    "code": "91020",
+    "name": "釧路沖１３０ｋｍＡ",
+    "latitude": 41.88333333333333,
+    "longitude": 145.65,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 365
+  },
+  {
+    "code": "91021",
+    "name": "釧路沖１３０ｋｍＢ",
+    "latitude": 42.1,
+    "longitude": 146.23333333333332,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 366
+  },
+  {
+    "code": "91030",
+    "name": "釧路沖１５０ｋｍＡ",
+    "latitude": 41.666666666666664,
+    "longitude": 145.53333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 367
+  },
+  {
+    "code": "91031",
+    "name": "十勝沖１５０ｋｍＡ",
+    "latitude": 41.516666666666666,
+    "longitude": 144.9,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 368
+  },
+  {
+    "code": "91032",
+    "name": "釧路沖１６０ｋｍＡ",
+    "latitude": 41.53333333333333,
+    "longitude": 145.25,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 369
+  },
+  {
+    "code": "91033",
+    "name": "釧路沖１７０ｋｍＡ",
+    "latitude": 41.666666666666664,
+    "longitude": 146.16666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 370
+  },
+  {
+    "code": "91040",
+    "name": "釧路沖１８０ｋｍＡ",
+    "latitude": 41.36666666666667,
+    "longitude": 145.6,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 371
+  },
+  {
+    "code": "92010",
+    "name": "青森東方沖１２０ｋｍＡ",
+    "latitude": 40.45,
+    "longitude": 143.2,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 372
+  },
+  {
+    "code": "92030",
+    "name": "青森東方沖１６０ｋｍＡ",
+    "latitude": 40.96666666666667,
+    "longitude": 143.45,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 373
+  },
+  {
+    "code": "92040",
+    "name": "青森東方沖１８０ｋｍＡ",
+    "latitude": 40.88333333333333,
+    "longitude": 143.76666666666668,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 374
+  },
+  {
+    "code": "92041",
+    "name": "青森東方沖２００ｋｍＡ",
+    "latitude": 40.78333333333333,
+    "longitude": 144.08333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 375
+  },
+  {
+    "code": "92042",
+    "name": "青森東方沖２００ｋｍＢ",
+    "latitude": 40.55,
+    "longitude": 144.13333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 376
+  },
+  {
+    "code": "92060",
+    "name": "青森東方沖２６０ｋｍＡ",
+    "latitude": 40.53333333333333,
+    "longitude": 144.93333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 377
+  },
+  {
+    "code": "92070",
+    "name": "青森東方沖３１０ｋｍＡ",
+    "latitude": 40.9,
+    "longitude": 145.4,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 378
+  },
+  {
+    "code": "92110",
+    "name": "岩手沖１１０ｋｍＡ",
+    "latitude": 39.7,
+    "longitude": 143.36666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 379
+  },
+  {
+    "code": "92111",
+    "name": "岩手沖１２０ｋｍＡ",
+    "latitude": 40.06666666666667,
+    "longitude": 143.31666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 380
+  },
+  {
+    "code": "92112",
+    "name": "岩手沖１２０ｋｍＢ",
+    "latitude": 39.3,
+    "longitude": 143.45,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 381
+  },
+  {
+    "code": "92120",
+    "name": "岩手沖１４０ｋｍＡ",
+    "latitude": 40.43333333333333,
+    "longitude": 143.55,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 382
+  },
+  {
+    "code": "92121",
+    "name": "岩手沖１４０ｋｍＢ",
+    "latitude": 40.083333333333336,
+    "longitude": 143.65,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 383
+  },
+  {
+    "code": "92122",
+    "name": "岩手沖１４０ｋｍＣ",
+    "latitude": 39.63333333333333,
+    "longitude": 143.71666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 384
+  },
+  {
+    "code": "92130",
+    "name": "岩手沖１５０ｋｍＡ",
+    "latitude": 39.18333333333333,
+    "longitude": 143.75,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 385
+  },
+  {
+    "code": "92131",
+    "name": "岩手沖１６０ｋｍＡ",
+    "latitude": 39.766666666666666,
+    "longitude": 143.93333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 386
+  },
+  {
+    "code": "92132",
+    "name": "岩手沖１７０ｋｍＡ",
+    "latitude": 40.43333333333333,
+    "longitude": 143.88333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 387
+  },
+  {
+    "code": "92133",
+    "name": "岩手沖１７０ｋｍＢ",
+    "latitude": 40.03333333333333,
+    "longitude": 143.95,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 388
+  },
+  {
+    "code": "92134",
+    "name": "岩手沖１７０ｋｍＣ",
+    "latitude": 39.05,
+    "longitude": 143.93333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 389
+  },
+  {
+    "code": "92150",
+    "name": "岩手沖２２０ｋｍＡ",
+    "latitude": 39,
+    "longitude": 144.58333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 390
+  },
+  {
+    "code": "92151",
+    "name": "岩手沖２３０ｋｍＡ",
+    "latitude": 39.516666666666666,
+    "longitude": 144.71666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 391
+  },
+  {
+    "code": "92152",
+    "name": "岩手沖２４０ｋｍＡ",
+    "latitude": 40.03333333333333,
+    "longitude": 144.81666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 392
+  },
+  {
+    "code": "92170",
+    "name": "岩手沖３８０ｋｍＡ",
+    "latitude": 40.3,
+    "longitude": 146.2,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 393
+  },
+  {
+    "code": "92171",
+    "name": "岩手沖３２０ｋｍＡ",
+    "latitude": 39.6,
+    "longitude": 145.8,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 394
+  },
+  {
+    "code": "92210",
+    "name": "宮城沖１１０ｋｍＡ",
+    "latitude": 38.766666666666666,
+    "longitude": 143.15,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 395
+  },
+  {
+    "code": "92211",
+    "name": "宮城沖１１０ｋｍＢ",
+    "latitude": 38.45,
+    "longitude": 142.83333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 396
+  },
+  {
+    "code": "92212",
+    "name": "宮城沖１２０ｋｍＡ",
+    "latitude": 37.983333333333334,
+    "longitude": 142.9,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 397
+  },
+  {
+    "code": "92220",
+    "name": "宮城沖１３０ｋｍＡ",
+    "latitude": 38.43333333333333,
+    "longitude": 143.16666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 398
+  },
+  {
+    "code": "92221",
+    "name": "宮城沖１４０ｋｍＡ",
+    "latitude": 38.78333333333333,
+    "longitude": 143.48333333333332,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 399
+  },
+  {
+    "code": "92230",
+    "name": "宮城沖１５０ｋｍＡ",
+    "latitude": 37.96666666666667,
+    "longitude": 143.25,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 400
+  },
+  {
+    "code": "92231",
+    "name": "宮城沖１６０ｋｍＡ",
+    "latitude": 38.833333333333336,
+    "longitude": 143.78333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 401
+  },
+  {
+    "code": "92232",
+    "name": "宮城沖１６０ｋｍＢ",
+    "latitude": 38.4,
+    "longitude": 143.51666666666668,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 402
+  },
+  {
+    "code": "92240",
+    "name": "宮城沖１８０ｋｍＡ",
+    "latitude": 38.3,
+    "longitude": 143.78333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 403
+  },
+  {
+    "code": "92241",
+    "name": "宮城沖１８０ｋｍＢ",
+    "latitude": 37.93333333333333,
+    "longitude": 143.56666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 404
+  },
+  {
+    "code": "92242",
+    "name": "宮城沖１９０ｋｍＡ",
+    "latitude": 38.06666666666667,
+    "longitude": 143.75,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 405
+  },
+  {
+    "code": "92250",
+    "name": "宮城沖２３０ｋｍＡ",
+    "latitude": 38.5,
+    "longitude": 144.45,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 406
+  },
+  {
+    "code": "92251",
+    "name": "宮城沖２４０ｋｍＡ",
+    "latitude": 37.983333333333334,
+    "longitude": 144.33333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 407
+  },
+  {
+    "code": "92270",
+    "name": "宮城沖３５０ｋｍＡ",
+    "latitude": 38.81666666666667,
+    "longitude": 145.6,
+    "organization": "気象庁",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 408
+  },
+  {
+    "code": "92500",
+    "name": "福島沖１００ｋｍＡ",
+    "latitude": 37.2,
+    "longitude": 142.2,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 409
+  },
+  {
+    "code": "92510",
+    "name": "福島沖１２０ｋｍＡ",
+    "latitude": 37.6,
+    "longitude": 142.61666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 410
+  },
+  {
+    "code": "92520",
+    "name": "福島沖１３０ｋｍＡ",
+    "latitude": 37.1,
+    "longitude": 142.5,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 411
+  },
+  {
+    "code": "92521",
+    "name": "福島沖１４０ｋｍＡ",
+    "latitude": 37.53333333333333,
+    "longitude": 142.93333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 412
+  },
+  {
+    "code": "92530",
+    "name": "福島沖１６０ｋｍＡ",
+    "latitude": 37.06666666666667,
+    "longitude": 142.81666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 413
+  },
+  {
+    "code": "92531",
+    "name": "福島沖１７０ｋｍＡ",
+    "latitude": 37.43333333333333,
+    "longitude": 143.23333333333332,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 414
+  },
+  {
+    "code": "92540",
+    "name": "福島沖１８０ｋｍＡ",
+    "latitude": 37.21666666666667,
+    "longitude": 143.06666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 415
+  },
+  {
+    "code": "92550",
+    "name": "福島沖２４０ｋｍＡ",
+    "latitude": 37.483333333333334,
+    "longitude": 144.18333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 416
+  },
+  {
+    "code": "92551",
+    "name": "福島沖２５０ｋｍＡ",
+    "latitude": 37.016666666666666,
+    "longitude": 143.95,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 417
+  },
+  {
+    "code": "93010",
+    "name": "茨城沖１１０ｋｍＡ",
+    "latitude": 36.68333333333333,
+    "longitude": 142.15,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 418
+  },
+  {
+    "code": "93011",
+    "name": "茨城沖１２０ｋｍＡ",
+    "latitude": 35.96666666666667,
+    "longitude": 142.11666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 419
+  },
+  {
+    "code": "93020",
+    "name": "茨城沖１４０ｋｍＡ",
+    "latitude": 36.6,
+    "longitude": 142.43333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 420
+  },
+  {
+    "code": "93021",
+    "name": "茨城沖１４０ｋｍＢ",
+    "latitude": 35.95,
+    "longitude": 142.4,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 421
+  },
+  {
+    "code": "93030",
+    "name": "茨城沖１６０ｋｍＡ",
+    "latitude": 36.38333333333333,
+    "longitude": 142.61666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 422
+  },
+  {
+    "code": "93031",
+    "name": "茨城沖１６０ｋｍＢ",
+    "latitude": 36.15,
+    "longitude": 142.55,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 423
+  },
+  {
+    "code": "93050",
+    "name": "茨城沖２２０ｋｍＡ",
+    "latitude": 36.13333333333333,
+    "longitude": 143.28333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 424
+  },
+  {
+    "code": "93051",
+    "name": "茨城沖２４０ｋｍＡ",
+    "latitude": 36.56666666666667,
+    "longitude": 143.6,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 425
+  },
+  {
+    "code": "93100",
+    "name": "千葉東方沖１００ｋｍＡ",
+    "latitude": 35.233333333333334,
+    "longitude": 141.86666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 426
+  },
+  {
+    "code": "93110",
+    "name": "千葉東方沖１１０ｋｍＡ",
+    "latitude": 35.4,
+    "longitude": 142.05,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 427
+  },
+  {
+    "code": "93111",
+    "name": "千葉南東沖１１０ｋｍＡ",
+    "latitude": 34.233333333333334,
+    "longitude": 140.73333333333332,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 428
+  },
+  {
+    "code": "93112",
+    "name": "千葉南東沖１２０ｋｍＡ",
+    "latitude": 34.53333333333333,
+    "longitude": 141.35,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 429
+  },
+  {
+    "code": "93113",
+    "name": "千葉南東沖１２０ｋｍＢ",
+    "latitude": 34.266666666666666,
+    "longitude": 141.03333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 430
+  },
+  {
+    "code": "93114",
+    "name": "千葉南東沖１２０ｋｍＣ",
+    "latitude": 33.95,
+    "longitude": 140.51666666666668,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 431
+  },
+  {
+    "code": "93120",
+    "name": "千葉南東沖１４０ｋｍＡ",
+    "latitude": 34.36666666666667,
+    "longitude": 141.53333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 432
+  },
+  {
+    "code": "93121",
+    "name": "千葉南東沖１４０ｋｍＢ",
+    "latitude": 34.2,
+    "longitude": 141.33333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 433
+  },
+  {
+    "code": "93130",
+    "name": "千葉南東沖１６０ｋｍＡ",
+    "latitude": 33.86666666666667,
+    "longitude": 141.13333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 434
+  },
+  {
+    "code": "93131",
+    "name": "千葉東方沖１７０ｋｍＡ",
+    "latitude": 35.21666666666667,
+    "longitude": 142.68333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 435
+  },
+  {
+    "code": "93140",
+    "name": "千葉南東沖１８０ｋｍＡ",
+    "latitude": 33.96666666666667,
+    "longitude": 141.73333333333332,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 436
+  },
+  {
+    "code": "93141",
+    "name": "千葉東方沖１８０ｋｍＡ",
+    "latitude": 34.71666666666667,
+    "longitude": 142.51666666666668,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 437
+  },
+  {
+    "code": "93142",
+    "name": "千葉東方沖１９０ｋｍＡ",
+    "latitude": 35.666666666666664,
+    "longitude": 142.96666666666667,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 438
+  },
+  {
+    "code": "93143",
+    "name": "千葉東方沖２００ｋｍＡ",
+    "latitude": 34.266666666666666,
+    "longitude": 142.23333333333332,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 439
+  },
+  {
+    "code": "95300",
+    "name": "和歌山沖１００ｋｍＡ",
+    "latitude": 33.13333333333333,
+    "longitude": 136.81666666666666,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 440
+  },
+  {
+    "code": "95301",
+    "name": "和歌山沖１００ｋｍＢ",
+    "latitude": 33.06666666666667,
+    "longitude": 136.83333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 441
+  },
+  {
+    "code": "95302",
+    "name": "和歌山沖１００ｋｍＣ",
+    "latitude": 33,
+    "longitude": 136.78333333333333,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 442
+  },
+  {
+    "code": "95303",
+    "name": "和歌山沖１００ｋｍＤ",
+    "latitude": 32.95,
+    "longitude": 136.73333333333332,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 443
+  },
+  {
+    "code": "95310",
+    "name": "和歌山沖１１０ｋｍＡ",
+    "latitude": 33.05,
+    "longitude": 136.93333333333334,
+    "organization": "防災科学技術研究所",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "000"
+    },
+    "sourceLine": 444
+  },
+  {
+    "code": "33030",
+    "name": "三浦市油壺",
+    "latitude": 35.166666666666664,
+    "longitude": 139.61666666666667,
+    "organization": "国土地理院",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "330"
+    },
+    "sourceLine": 449
+  },
+  {
+    "code": "38034",
+    "name": "南伊豆",
+    "latitude": 34.61666666666667,
+    "longitude": 138.88333333333333,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "068",
+      "1957": "048",
+      "1958": "028",
+      "1968": "008",
+      "1999": "380"
+    },
+    "sourceLine": 450
+  },
+  {
+    "code": "38032",
+    "name": "焼津",
+    "latitude": 34.86666666666667,
+    "longitude": 138.33333333333334,
+    "organization": "国土地理院",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "380"
+    },
+    "sourceLine": 451
+  },
+  {
+    "code": "77002",
+    "name": "南大隈町大泊",
+    "latitude": 31.016666666666666,
+    "longitude": 130.68333333333334,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "074",
+      "1957": "076",
+      "1958": "036",
+      "1968": "016",
+      "1999": "770"
+    },
+    "sourceLine": 452
+  },
+  {
+    "code": "77102",
+    "name": "種子島西之表",
+    "latitude": 30.733333333333334,
+    "longitude": 131,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "000",
+      "1957": "000",
+      "1958": "036",
+      "1968": "016",
+      "1999": "771"
+    },
+    "sourceLine": 453
+  },
+  {
+    "code": "10031",
+    "name": "羅臼漁港",
+    "latitude": 44.016666666666666,
+    "longitude": 145.2,
+    "organization": "釧路開発建設部",
+    "forecastAreas": {
+      "1952": "062",
+      "1957": "042",
+      "1958": "022",
+      "1968": "002",
+      "1999": "100"
+    },
+    "sourceLine": 458
+  },
+  {
+    "code": "10020",
+    "name": "根室港",
+    "latitude": 43.35,
+    "longitude": 145.58333333333334,
+    "organization": "釧路開発建設部",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "100"
+    },
+    "sourceLine": 459
+  },
+  {
+    "code": "10034",
+    "name": "厚岸漁港",
+    "latitude": 43.05,
+    "longitude": 144.85,
+    "organization": "釧路開発建設部",
+    "forecastAreas": {
+      "1952": "062",
+      "1957": "042",
+      "1958": "022",
+      "1968": "002",
+      "1999": "100"
+    },
+    "sourceLine": 460
+  },
+  {
+    "code": "10102",
+    "name": "十勝港",
+    "latitude": 42.3,
+    "longitude": 143.31666666666666,
+    "organization": "帯広開発建設部",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "101"
+    },
+    "sourceLine": 461
+  },
+  {
+    "code": "10203",
+    "name": "苫小牧西港",
+    "latitude": 42.63333333333333,
+    "longitude": 141.61666666666667,
+    "organization": "室蘭開発建設部",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "102"
+    },
+    "sourceLine": 462
+  },
+  {
+    "code": "10221",
+    "name": "苫小牧東港",
+    "latitude": 42.6,
+    "longitude": 141.81666666666666,
+    "organization": "室蘭開発建設部",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "102"
+    },
+    "sourceLine": 463
+  },
+  {
+    "code": "10223",
+    "name": "渡島森港",
+    "latitude": 42.11666666666667,
+    "longitude": 140.6,
+    "organization": "函館開発建設部",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "102"
+    },
+    "sourceLine": 464
+  },
+  {
+    "code": "10239",
+    "name": "山背泊漁港",
+    "latitude": 41.78333333333333,
+    "longitude": 141.11666666666667,
+    "organization": "函館開発建設部",
+    "forecastAreas": {
+      "1952": "062",
+      "1957": "042",
+      "1958": "022",
+      "1968": "002",
+      "1999": "102"
+    },
+    "sourceLine": 465
+  },
+  {
+    "code": "38034",
+    "name": "南伊豆",
+    "latitude": 34.61666666666667,
+    "longitude": 138.88333333333333,
+    "organization": "海上保安庁海洋情報部",
+    "forecastAreas": {
+      "1952": "068",
+      "1957": "048",
+      "1958": "028",
+      "1968": "008",
+      "1999": "380"
+    },
+    "sourceLine": 471
+  },
+  {
+    "code": "34139",
+    "name": "小木",
+    "latitude": 37.81666666666667,
+    "longitude": 138.28333333333333,
+    "organization": "国土地理院",
+    "forecastAreas": {
+      "1952": null,
+      "1957": null,
+      "1958": null,
+      "1968": null,
+      "1999": "341"
+    },
+    "sourceLine": 477
+  }
+]
