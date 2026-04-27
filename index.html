@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>地震情報リスト</title>
+  <style>
+    /* ===== リセット ===== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #111;
+      color: #fff;
+      overflow: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    #app {
+      width: 100%;
+      max-width: 480px;
+      height: 100vh;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    div {
+      line-height: 1.2;
+    }
+
+    * {
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    img, video {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* ===== レイアウト ===== */
+
+    #status-bar {
+      height: 5vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1vh;
+      font-size: 1.8vh;
+    }
+
+    #latest {
+      height: 18vh;
+      display: flex;
+      align-items: center;
+      padding: 1vh;
+    }
+
+    #list {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .row {
+      height: 6vh;
+      display: flex;
+      align-items: center;
+      padding: 0 1vh;
+      gap: 1vh;
+      font-size: 2vh;
+    }
+
+    .card {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 2vh;
+    }
+
+    .intensity {
+      height: 100%;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4vh;
+      font-weight: bold;
+      border-radius: 1vh;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5vh;
+    }
+
+    .name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 2.2vh;
+    }
+
+    .meta {
+      font-size: 1.8vh;
+      opacity: 0.9;
+    }
+
+    #error,
+    #empty {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2vh;
+    }
+
+    /* ===== テーマ ===== */
+
+    :root {
+      --i1: #3C5A82;
+      --i2: #1E82E6;
+      --i3: #78E6DC;
+      --i4: #FFFF96;
+      --i5m: #FFD200;
+      --i5p: #FF9600;
+      --i6m: #F03200;
+      --i6p: #BE0000;
+      --i7: #8C0028;
+      --white95: rgba(255,255,255,0.95);
+      --black95: rgba(0,0,0,0.95);
+    }
+
+    .intensity.i1 { background: var(--i1); color: var(--white95); }
+    .intensity.i2 { background: var(--i2); color: var(--white95); }
+    .intensity.i3 { background: var(--i3); color: var(--black95); }
+    .intensity.i4 { background: var(--i4); color: var(--black95); }
+    .intensity.i5m { background: var(--i5m); color: var(--black95); }
+    .intensity.i5p { background: var(--i5p); color: var(--black95); }
+    .intensity.i6m { background: var(--i6m); color: var(--white95); }
+    .intensity.i6p { background: var(--i6p); color: var(--white95); }
+    .intensity.i7  { background: var(--i7);  color: var(--white95); }
+
+    .intensity {
+      box-shadow: 0 0 0.5vh rgba(0,0,0,0.4);
+    }
+
+    #status-bar {
+      background: rgba(255,255,255,0.05);
+      color: rgba(255,255,255,0.8);
+    }
+
+    #updated {
+      opacity: 0.8;
+    }
+
+    #status {
+      font-size: 1.6vh;
+    }
+
+    #error {
+      color: #ff4d4f;
+      text-align: center;
+    }
+
+    #empty {
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+    }
+
+    .row {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    #latest {
+      border-bottom: 0.2vh solid rgba(255,255,255,0.1);
+    }
+
+    /* ===== アニメーション ===== */
+
+    .new {
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(1vh); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .highlight {
+      animation: flash 0.6s ease;
+    }
+
+    @keyframes flash {
+      0%   { opacity: 1; }
+      50%  { opacity: 0.6; }
+      100% { opacity: 1; }
+    }
+
+    .loading {
+      opacity: 0.6;
+      transition: opacity 0.2s ease;
+    }
+
+    .blink {
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%      { opacity: 0.4; }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+
+    <div id="status-bar">
+      <div id="updated">最終更新: --:--:--</div>
+      <div id="status"></div>
+    </div>
+
+    <div id="latest"></div>
+
+    <div id="list"></div>
+
+    <div id="error" class="hidden">通信エラー</div>
+
+    <div id="empty" class="hidden">現在表示できる地震情報はありません</div>
+
+  </div>
+
+  <script>
+    /* ===== config ===== */
+    const UPDATE_INTERVAL = 5000;
+    const STALE_TIME = 60000;
+    const MAX_ITEMS = 50;
+    const LAYOUT = {
+      latestRatio: 0.18,
+      rowRatio: 0.06
+    };
+
+    /* ===== state ===== */
+    let _state = [];
+    function getState() { return _state; }
+    function setState(s) { _state = s; }
+
+    /* ===== api/wolfx ===== */
+    const API_URL = "https://api.wolfx.jp/jma_eqlist.json";
+
+    async function fetchQuakes() {
+      const res = await fetch(API_URL, { cache: "no-store" });
+      if (!res.ok) throw new Error("API取得失敗");
+      const json = await res.json();
+
+      if (Array.isArray(json))            return json;
+      if (Array.isArray(json.list))       return json.list;
+      if (typeof json === "object")       return Object.values(json);
+
+      console.error("取得データ:", json);
+      throw new Error("データ形式異常");
+    }
+
+    /* ===== core/filter ===== */
+    function filterQuakes(data) {
+      return data.filter(eq => {
+        if (!eq.isFinal) return false;
+        if (!eq.hypocenter || !eq.hypocenter.name) return false;
+        if (eq.magnitude === null || eq.magnitude <= 0) return false;
+        if (eq.maxScale === null || eq.maxScale === undefined) return false;
+        return true;
+      });
+    }
+
+    /* ===== core/dedupe ===== */
+    function dedupeQuakes(list) {
+      const map = new Map();
+      list.forEach(eq => {
+        const key = eq.eventId || eq.originTime;
+        if (!map.has(key)) { map.set(key, eq); return; }
+        const old = map.get(key);
+        if (eq.isFinal && !old.isFinal)   { map.set(key, eq); return; }
+        if (eq.time > old.time)            { map.set(key, eq); return; }
+        if (eq.maxScale > old.maxScale)    { map.set(key, eq); return; }
+      });
+      return Array.from(map.values()).sort((a, b) => b.time - a.time);
+    }
+
+    /* ===== core/normalize ===== */
+    function normalizeScale(scale) {
+      if (!scale) return "0";
+      return String(scale).replace("震度","").replace("弱","-").replace("強","+");
+    }
+    function formatScaleText(scale) {
+      return scale.replace("-","弱").replace("+","強");
+    }
+    function normalizeName(name) {
+      if (!name || name === "不明") return "震源不明";
+      return name;
+    }
+    function normalizeMag(m) {
+      if (!m || m <= 0) return "不明";
+      return Number(m).toFixed(1);
+    }
+    function normalizeDepth(d) {
+      if (!d || d < 0) return "不明";
+      return d + "km";
+    }
+    function normalizeQuakes(list) {
+      return list.map(eq => {
+        const scale = normalizeScale(eq.maxScale);
+        return {
+          id: eq.eventId || eq.originTime,
+          time: eq.time || eq.originTime,
+          name: normalizeName(eq.hypocenter?.name),
+          mag: normalizeMag(eq.magnitude),
+          depth: normalizeDepth(eq.depth),
+          scale: scale,
+          scaleText: formatScaleText(scale)
+        };
+      });
+    }
+
+    /* ===== realtime/diff ===== */
+    function getDiff(oldList, newList) {
+      const oldIds = new Set(oldList.map(e => e.id));
+      return newList.filter(eq => !oldIds.has(eq.id));
+    }
+
+    /* ===== realtime/poll ===== */
+    let _timer = null;
+    function startPolling(callback, interval = 5000) {
+      if (_timer) return;
+      _timer = setInterval(async () => {
+        try { await callback(); } catch (e) { console.error("Polling error:", e); }
+      }, interval);
+    }
+
+    /* ===== utils/color ===== */
+    function getIntensityClass(scale) {
+      if (!scale) return "i0";
+      switch (String(scale)) {
+        case "1":  return "i1";
+        case "2":  return "i2";
+        case "3":  return "i3";
+        case "4":  return "i4";
+        case "5-": return "i5m";
+        case "5+": return "i5p";
+        case "6-": return "i6m";
+        case "6+": return "i6p";
+        case "7":  return "i7";
+        default:   return "i1";
+      }
+    }
+
+    /* ===== utils/time ===== */
+    function formatTime(timestamp) {
+      if (!timestamp) return "--:--";
+      const date = new Date(timestamp);
+      const h = String(date.getHours()).padStart(2, "0");
+      const m = String(date.getMinutes()).padStart(2, "0");
+      return `${h}:${m}`;
+    }
+
+    /* ===== ui/components ===== */
+    function createLatest(eq, isNew = false) {
+      const iClass = getIntensityClass(eq.scale);
+      return `
+        <div class="card ${isNew ? "new highlight" : ""}">
+          <div class="intensity ${iClass}">${eq.scaleText}</div>
+          <div class="info">
+            <div class="name">${eq.name}</div>
+            <div class="meta">
+              ${formatTime(eq.time)}　M${eq.mag}　深さ ${eq.depth}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function createRow(eq, isNew = false) {
+      const iClass = getIntensityClass(eq.scale);
+      return `
+        <div class="row ${isNew ? "new" : ""}">
+          <div class="intensity ${iClass}">${eq.scaleText}</div>
+          <div class="info">
+            <div class="name">${eq.name}</div>
+            <div class="meta">${formatTime(eq.time)}　M${eq.mag}</div>
+          </div>
+        </div>
+      `;
+    }
+
+    /* ===== ui/layout ===== */
+    function getMaxRows() {
+      const vh = window.innerHeight;
+      const latestHeight = vh * LAYOUT.latestRatio;
+      const rowHeight = vh * LAYOUT.rowRatio;
+      let rows = Math.floor((vh - latestHeight) / rowHeight);
+      if (rows < 1) rows = 1;
+      if (rows > 20) rows = 20;
+      return rows;
+    }
+
+    /* ===== ui/render ===== */
+    function render(list, newItems = []) {
+      if (!list || list.length === 0) return;
+      const latest = list[0];
+      const others = list.slice(1);
+      const maxRows = getMaxRows();
+      const displayList = others.slice(0, maxRows);
+      const newIds = new Set(newItems.map(e => e.id));
+
+      document.getElementById("latest").innerHTML = createLatest(latest, newIds.has(latest.id));
+      document.getElementById("list").innerHTML = displayList
+        .map(eq => createRow(eq, newIds.has(eq.id)))
+        .join("");
+    }
+
+    /* ===== main ===== */
+    let lastFetchTime = 0;
+
+    async function update() {
+      try {
+        setLoading(true);
+        const raw = await fetchQuakes();
+        let data = filterQuakes(raw);
+        data = dedupeQuakes(data);
+        data = normalizeQuakes(data);
+
+        const oldData = getState();
+        const diff = getDiff(oldData, data);
+
+        if (diff.length > 0 || oldData.length === 0) {
+          setState(data);
+          render(data, diff);
+          updateTimestamp();
+        }
+
+        lastFetchTime = Date.now();
+        showError(false);
+        showEmpty(data.length === 0);
+      } catch (e) {
+        console.error(e);
+        showError(true);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    function updateTimestamp() {
+      const now = new Date();
+      document.getElementById("updated").textContent =
+        "最終更新: " + now.toLocaleTimeString();
+    }
+
+    function setLoading(flag) {
+      document.getElementById("app").classList.toggle("loading", flag);
+    }
+
+    function showError(flag) {
+      document.getElementById("error").classList.toggle("hidden", !flag);
+    }
+
+    function showEmpty(flag) {
+      document.getElementById("empty").classList.toggle("hidden", !flag);
+    }
+
+    function checkStale() {
+      const status = document.getElementById("status");
+      status.textContent = (Date.now() - lastFetchTime > STALE_TIME)
+        ? "情報が古い可能性あり" : "";
+    }
+
+    setInterval(checkStale, 10000);
+
+    window.addEventListener("resize", () => {
+      const data = getState();
+      if (data.length > 0) render(data);
+    });
+
+    // 起動
+    update().then(() => startPolling(update, UPDATE_INTERVAL));
+  </script>
+</body>
+</html>
