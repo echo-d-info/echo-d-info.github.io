@@ -1,0 +1,81 @@
+/* ===== 震度カラー定義 ===== */
+
+:root {
+  --i1: #3C5A82;
+  --i2: #1E82E6;
+  --i3: #78E6DC;
+  --i4: #FFFF96;
+  --i5m: #FFD200; /* 5弱 */
+  --i5p: #FF9600; /* 5強 */
+  --i6m: #F03200; /* 6弱 */
+  --i6p: #BE0000; /* 6強 */
+  --i7: #8C0028;
+
+  --white95: rgba(255,255,255,0.95);
+  --black95: rgba(0,0,0,0.95);
+}
+
+/* ===== 震度ごとの色 ===== */
+
+.intensity.i1 { background: var(--i1); color: var(--white95); }
+.intensity.i2 { background: var(--i2); color: var(--white95); }
+
+.intensity.i3 { background: var(--i3); color: var(--black95); }
+.intensity.i4 { background: var(--i4); color: var(--black95); }
+
+.intensity.i5m { background: var(--i5m); color: var(--black95); }
+.intensity.i5p { background: var(--i5p); color: var(--black95); }
+
+.intensity.i6m { background: var(--i6m); color: var(--white95); }
+.intensity.i6p { background: var(--i6p); color: var(--white95); }
+
+.intensity.i7 { background: var(--i7); color: var(--white95); }
+
+/* ===== 視認性強化 ===== */
+
+.intensity {
+  box-shadow: 0 0 0.5vh rgba(0,0,0,0.4);
+}
+
+/* ===== ステータスバー ===== */
+
+#status-bar {
+  background: rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.8);
+}
+
+/* ===== 更新表示 ===== */
+
+#updated {
+  opacity: 0.8;
+}
+
+#status {
+  font-size: 1.6vh;
+}
+
+/* ===== エラー表示 ===== */
+
+#error {
+  color: #ff4d4f;
+  text-align: center;
+}
+
+/* ===== 空状態 ===== */
+
+#empty {
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+}
+
+/* ===== 行の区切り ===== */
+
+.row {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ===== 最新カード強調 ===== */
+
+#latest {
+  border-bottom: 0.2vh solid rgba(255,255,255,0.1);
+}
