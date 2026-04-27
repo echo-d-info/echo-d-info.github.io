@@ -2,7 +2,6 @@
 
 const API_URL = "https://api.wolfx.jp/jma_eqlist.json";
 
-/* ===== 取得処理 ===== */
 export async function fetchQuakes() {
   const res = await fetch(API_URL, {
     cache: "no-store"
@@ -14,15 +13,22 @@ export async function fetchQuakes() {
 
   const json = await res.json();
 
-  // ▼ ここが重要（配列 or オブジェクト両対応）
-  const data = Array.isArray(json) ? json : json.list;
+  let data;
 
-  // デバッグ用（最初だけ確認推奨）
-  if (!data) {
-    console.error("取得データ（生）:", json);
-  }
+  // ① すでに配列
+  if (Array.isArray(json)) {
+    data = json;
 
-  if (!Array.isArray(data)) {
+  // ② listに入ってる場合
+  } else if (Array.isArray(json.list)) {
+    data = json.list;
+
+  // ③ オブジェクト形式（今回ここ）
+  } else if (typeof json === "object") {
+    data = Object.values(json);
+
+  } else {
+    console.error("取得データ:", json);
     throw new Error("データ形式異常");
   }
 
