@@ -1,196 +1,42 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P2P地震情報 - 10段階カラー版</title>
-    <style>
-        :root {
-            /* 背景・基本色 */
-            --bg-dark: #121212;
-            --card-bg: #222222;
-            
-            /* ご指定の10段階震度カラーコード */
-            --int-1: #3C5A82;
-            --int-2: #1E82E6;
-            --int-3: #78E6DC;
-            --int-4: #FFFF96;
-            --int-5-low: #FFD200;
-            --int-5-high: #FF9600;
-            --int-6-low: #F03200;
-            --int-6-high: #BE0000;
-            --int-7: #8C0028;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-            /* 文字色（不透明度95%） */
-            --text-white: rgba(255, 255, 255, 0.95);
-            --text-black: rgba(0, 0, 0, 0.95);
-        }
+  <title>地震情報リスト</title>
 
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-white);
-            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-            margin: 0;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-        }
-
-        #earthquake-list {
-            width: 100%;
-            max-width: 480px; /* 横1列固定・タブサイズ対応 */
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        /* 共通カードスタイル */
-        .eq-item {
-            display: grid;
-            grid-template-columns: 60px 1fr 80px;
-            align-items: center;
-            background-color: var(--card-bg);
-            border-radius: 2px;
-            overflow: hidden;
-            min-height: 55px;
-        }
-
-        /* 最新の地震カード（大きく表示） */
-        .eq-item.latest {
-            grid-template-columns: 85px 1fr;
-            grid-template-rows: auto auto;
-            min-height: 110px;
-            margin-bottom: 6px;
-            border: 1px solid #333;
-        }
-
-        /* 震度バッジ */
-        .intensity-badge {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
-            font-weight: 900;
-            grid-row: span 1;
-        }
-
-        .latest .intensity-badge {
-            grid-row: span 2;
-            font-size: 56px;
-        }
-
-        /* 情報エリア */
-        .info {
-            padding: 5px 12px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .location { font-size: 18px; font-weight: bold; margin-bottom: 2px; }
-        .time { font-size: 13px; color: #bbb; }
-        .magnitude { font-size: 20px; font-weight: bold; text-align: right; padding-right: 15px; }
-
-        /* 最新情報専用：Mと深さ */
-        .latest-details {
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 10px;
-            display: flex;
-            gap: 15px;
-            padding-top: 5px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
-        /* 震度別配色と文字色指定（指示通り） */
-        .int-1 { background-color: var(--int-1); color: var(--text-white); }
-        .int-2 { background-color: var(--int-2); color: var(--text-white); }
-        .int-3 { background-color: var(--int-3); color: var(--text-black); }
-        .int-4 { background-color: var(--int-4); color: var(--text-black); }
-        .int-5l { background-color: var(--int-5-low); color: var(--text-black); }
-        .int-5h { background-color: var(--int-5-high); color: var(--text-black); }
-        .int-6l { background-color: var(--int-6-low); color: var(--text-white); }
-        .int-6h { background-color: var(--int-6-high); color: var(--text-white); }
-        .int-7 { background-color: var(--int-7); color: var(--text-white); }
-
-    </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/animation.css" />
 </head>
+
 <body>
+  <div id="app">
 
-    <div id="earthquake-list">地震情報を読み込み中...</div>
+    <!-- 上部バー（状態表示） -->
+    <div id="status-bar">
+      <div id="updated">最終更新: --:--:--</div>
+      <div id="status"></div>
+    </div>
 
-    <script>
-        // P2P地震情報 API (地震情報 551)
-        const API_URL = "https://api.p2pquake.net/v2/history?codes=551&limit=20";
+    <!-- 最新地震（大きく表示） -->
+    <div id="latest"></div>
 
-        // 震度値をクラス名に変換（10段階対応）
-        function getIntensityClass(scale) {
-            if (scale >= 70) return 'int-7';
-            if (scale >= 60) return 'int-6h';
-            if (scale >= 55) return 'int-6l';
-            if (scale >= 50) return 'int-5h';
-            if (scale >= 45) return 'int-5l';
-            if (scale >= 40) return 'int-4';
-            if (scale >= 30) return 'int-3';
-            if (scale >= 20) return 'int-2';
-            return 'int-1';
-        }
+    <!-- 過去地震リスト -->
+    <div id="list"></div>
 
-        // 表示用震度テキスト
-        function formatIntensity(scale) {
-            const map = { 10:"1", 20:"2", 30:"3", 40:"4", 45:"5-", 50:"5+", 55:"6-", 60:"6+", 70:"7" };
-            return map[scale] || "1";
-        }
+    <!-- エラー表示 -->
+    <div id="error" class="hidden">通信エラー</div>
 
-        async function fetchQuakes() {
-            try {
-                const response = await fetch(API_URL);
-                const data = await response.json();
-                renderList(data);
-            } catch (error) {
-                document.getElementById('earthquake-list').innerText = "データの取得に失敗しました。";
-            }
-        }
+    <!-- データなし -->
+    <div id="empty" class="hidden">現在表示できる地震情報はありません</div>
 
-        function renderList(data) {
-            const container = document.getElementById('earthquake-list');
-            container.innerHTML = "";
+  </div>
 
-            data.forEach((item, index) => {
-                const isLatest = (index === 0);
-                const eq = item.earthquake;
-                const hypo = eq.hypocenter;
-                
-                const iClass = getIntensityClass(eq.maxScale);
-                const iText = formatIntensity(eq.maxScale);
-
-                // 深さを数値(km)で固定（不明時は不明と表示）
-                const depthText = (hypo.depth === -1) ? "不明" : `${hypo.depth}km`;
-
-                const div = document.createElement('div');
-                div.className = `eq-item ${isLatest ? 'latest' : ''}`;
-
-                div.innerHTML = `
-                    <div class="intensity-badge ${iClass}">${iText}</div>
-                    <div class="info">
-                        <div class="location">${hypo.name}</div>
-                        <div class="time">${eq.time}</div>
-                        ${isLatest ? `
-                        <div class="latest-details">
-                            <span>M ${hypo.magnitude.toFixed(1)}</span>
-                            <span>深さ：${depthText}</span>
-                        </div>` : ''}
-                    </div>
-                    ${!isLatest ? `<div class="magnitude">M ${hypo.magnitude.toFixed(1)}</div>` : ''}
-                `;
-                
-                container.appendChild(div);
-            });
-        }
-
-        // 初期読み込み
-        fetchQuakes();
-    </script>
+  <!-- JS（モジュール読み込み） -->
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
