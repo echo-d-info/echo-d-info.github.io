@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[v0.1.13]アメダス観測一覧</title>
+
+<style>
+body{
+  font-family:sans-serif;
+  margin:0;
+  padding:8px 12px;
+  background:#f5f5f5;
+}
+
+h1{
+  margin:0 0 4px 0;
+  font-size:18px;
+}
+
+#status{
+  margin:0 0 6px 0;
+  font-size:12px;
+}
+
+#toggleSettings{
+  font-size:12px;
+  padding:4px 8px;
+  margin-bottom:6px;
+  cursor:pointer;
+}
+
+#settings{
+  display:none;
+  margin:6px 0 10px 0;
+}
+
+#settings label{
+  display:inline-block;
+  font-size:12px;
+  margin-right:8px;
+}
+
+/* ===== テーブル ===== */
+.table-wrap{
+  overflow:auto;
+  background:#fff;
+  border-radius:10px;
+  max-height:calc(100vh - 150px);
+}
+
+table{
+  border-collapse:collapse;
+  width:100%;
+  min-width:1400px;
+}
+
+th,td{
+  border:1px solid #ddd;
+  padding:4px 6px;
+  text-align:center;
+  white-space:nowrap;
+  font-size:12px;
+}
+
+thead th{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background:#222;
+  color:#fff;
+}
+
+tr:nth-child(even){
+  background:#fafafa;
+}
+
+/* 地点 */
+.station-name{
+  font-weight:bold;
+  font-size:13px;
+  line-height:1.1;
+}
+
+.station-code{
+  font-size:10px;
+  color:#666;
+  margin-top:1px;
+  line-height:1;
+}
+
+/* ヘッダー */
+.th-name{
+  font-weight:bold;
+}
+
+.th-unit{
+  font-size:11px;
+  color:#bbb;
+  margin-top:1px;
+  line-height:1;
+}
+
+.station-cell{
+  text-align:left;
+}
+</style>
+</head>
+
+<body>
+
+<h1>アメダス観測一覧</h1>
+<div id="status">読み込み中...</div>
+
+<button id="toggleSettings">▼ 設定</button>
+<div id="settings"></div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr id="thead-row">
+  <th>地点</th>
+</tr>
+</thead>
+<tbody id="tbody"></tbody>
+</table>
+</div>
+
+<script>
+
+// =====================
+// 表示項目
+// =====================
+const elements = {
+  temp:{name:"気温",unit:"℃"},
+  humidity:{name:"湿度",unit:"%"},
+  pressure:{name:"現地気圧",unit:"hPa"},
+  normalPressure:{name:"海面更正気圧",unit:"hPa"},
+  wind:{name:"平均風速",unit:"m/s"},
+  windDirection:{name:"風向",unit:null},
+  precipitation10m:{name:"10分降水量",unit:"mm/10min"},
+  precipitation1h:{name:"1時間降水量",unit:"mm/h"},
+  precipitation3h:{name:"3時間降水量",unit:"mm/3h"},
+  precipitation24h:{name:"24時間降水量",unit:"mm/24h"},
+  snow:{name:"積雪深",unit:"cm"},
+  snow1h:{name:"1時間降雪量",unit:"cm/h"},
+  snow6h:{name:"6時間降雪量",unit:"cm/6h"},
+  snow12h:{name:"12時間降雪量",unit:"cm/12h"},
+  snow24h:{name:"24時間降雪量",unit:"cm/24h"},
+  sun10m:{name:"10分日照",unit:"分"},
+  sun1h:{name:"1時間日照",unit:"時間"},
+  visibility:{name:"視程",unit:"m"},
+  weather:{name:"現在天気",unit:null}
+};
+
+// 風向
+const windDirectionMap = {
+  0:"静穏",1:"北北東",2:"北東",3:"東北東",4:"東",5:"東南東",
+  6:"南東",7:"南南東",8:"南",9:"南南西",10:"南西",11:"西南西",
+  12:"西",13:"西北西",14:"北西",15:"北北西",16:"北"
+};
+
+// =====================
+// 状態
+// =====================
+let state = {};
+let stationsCache = {};
+let amedasCache = {};
+
+// =====================
+// 設定UI
+// =====================
+const settings = document.getElementById("settings");
+const toggleSettings = document.getElementById("toggleSettings");
+
+toggleSettings.onclick = () => {
+  const open = settings.style.display === "block";
+  settings.style.display = open ? "none" : "block";
+  toggleSettings.textContent = open ? "▼ 設定" : "▲ 設定";
+};
+
+function buildControls(){
+  for(const key in elements){
+
+    state[key] = true;
+
+    const label = document.createElement("label");
+
+    const cb = document.createElement("input");
+    cb.type = "checkbox";
+    cb.checked = true;
+
+    cb.onchange = () => {
+      state[key] = cb.checked;
+      buildHeader();
+      buildTable(stationsCache, amedasCache);
+    };
+
+    label.appendChild(cb);
+    label.appendChild(document.createTextNode(elements[key].name));
+
+    settings.appendChild(label);
+  }
+}
+
+// =====================
+// 値取得
+// =====================
+function getValue(obj,key){
+
+  if(!obj || !(key in obj)) return "--";
+
+  const v = obj[key][0];
+  if(v === null || v === undefined) return "--";
+
+  if(key === "windDirection"){
+    return windDirectionMap[v] ?? v;
+  }
+
+  return v;
+}
+
+// =====================
+// ヘッダー
+// =====================
+function buildHeader(){
+
+  const tr = document.getElementById("thead-row");
+
+  tr.innerHTML = "<th>地点</th>"; // ★これ必須
+  
+  for(const k in elements){
+
+    if(!state[k]) continue;
+
+    const th = document.createElement("th");
+    const e = elements[k];
+
+    th.innerHTML = `
+      <div class="th-name">${e.name}</div>
+      ${e.unit ? `<div class="th-unit">${e.unit}</div>` : ``}
+    `;
+
+    tr.appendChild(th);
+  }
+}
+
+// =====================
+// fetch stations
+// =====================
+async function fetchStations(){
+  const res = await fetch("./points.json");
+  return await res.json();
+}
+
+// =====================
+// fetch amedas
+// =====================
+async function fetchAmedas(){
+
+  let date = new Date();
+  date.setSeconds(0);
+  date.setMilliseconds(0);
+  date.setMinutes(Math.floor(date.getMinutes()/10)*10);
+
+  for(let i=0;i<20;i++){
+
+    const t = getTimeString(date);
+    const url = `https://www.jma.go.jp/bosai/amedas/data/map/${t}.json`;
+
+    try{
+      const res = await fetch(url);
+      if(!res.ok) throw new Error();
+      const data = await res.json();
+
+      document.getElementById("status").textContent =
+        `データ時刻: ${t}`;
+
+      return data;
+
+    }catch(e){
+      date.setMinutes(date.getMinutes()-10);
+    }
+  }
+
+  document.getElementById("status").textContent = "データ取得失敗（時間をおいて再読み込みしてください）";
+  throw new Error("取得失敗");
+}
+
+// =====================
+// 時刻
+// =====================
+function getTimeString(date){
+  // JSTに変換（UTC+9）してフォーマット
+  const jst = new Date(date.getTime() + 9 * 60 * 60 * 1000);
+  return (
+    jst.getUTCFullYear() +
+    String(jst.getUTCMonth()+1).padStart(2,"0") +
+    String(jst.getUTCDate()).padStart(2,"0") +
+    String(jst.getUTCHours()).padStart(2,"0") +
+    String(jst.getUTCMinutes()).padStart(2,"0") +
+    "00"
+  );
+}
+
+// =====================
+// 表生成
+// =====================
+function buildTable(stations, amedas){
+
+  stationsCache = stations;
+  amedasCache = amedas;
+
+  const tbody = document.getElementById("tbody");
+  tbody.innerHTML = "";
+
+  for(const code in stations){
+
+    const st = stations[code];
+    const d = amedas[code];
+
+    const tr = document.createElement("tr");
+
+    const td0 = document.createElement("td");
+    td0.className = "station-cell";
+    td0.innerHTML = `
+      <div class="station-name">${st.name}</div>
+      <div class="station-code">${code}</div>
+    `;
+    tr.appendChild(td0);
+
+    for(const k in elements){
+
+      if(!state[k]) continue;
+
+      const td = document.createElement("td");
+      td.textContent = getValue(d,k);
+      tr.appendChild(td);
+    }
+
+    tbody.appendChild(tr);
+  }
+}
+
+// =====================
+// 起動
+// =====================
+(async () => {
+
+  try{
+    const stations = await fetchStations();
+
+    buildControls(); // stateを先に初期化してからヘッダーを生成
+    buildHeader();
+
+    const amedas = await fetchAmedas();
+
+    buildTable(stations, amedas);
+
+  }catch(e){
+    document.getElementById("status").textContent =
+      `エラー: ${e.message}`;
+  }
+
+})();
+
+</script>
+
+</body>
+</html>
