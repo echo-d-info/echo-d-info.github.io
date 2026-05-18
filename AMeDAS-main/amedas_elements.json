@@ -1,0 +1,78 @@
+{
+  "temp": {
+    "name": "気温",
+    "unit": "℃"
+  },
+  "humidity": {
+    "name": "湿度",
+    "unit": "%"
+  },
+  "pressure": {
+    "name": "現地気圧",
+    "unit": "hPa"
+  },
+  "normalPressure": {
+    "name": "海面更正気圧",
+    "unit": "hPa"
+  },
+  "wind": {
+    "name": "平均風速",
+    "unit": "m/s"
+  },
+  "windDirection": {
+    "name": "風向",
+    "unit": null
+  },
+  "precipitation10m": {
+    "name": "10分降水量",
+    "unit": "mm/10min"
+  },
+  "precipitation1h": {
+    "name": "1時間降水量",
+    "unit": "mm/h"
+  },
+  "precipitation3h": {
+    "name": "3時間降水量",
+    "unit": "mm/3h"
+  },
+  "precipitation24h": {
+    "name": "24時間降水量",
+    "unit": "mm/24h"
+  },
+  "snow": {
+    "name": "積雪深",
+    "unit": "cm"
+  },
+  "snow1h": {
+    "name": "1時間降雪量",
+    "unit": "cm/h"
+  },
+  "snow6h": {
+    "name": "6時間降雪量",
+    "unit": "cm/6h"
+  },
+  "snow12h": {
+    "name": "12時間降雪量",
+    "unit": "cm/12h"
+  },
+  "snow24h": {
+    "name": "24時間降雪量",
+    "unit": "cm/24h"
+  },
+  "sun10m": {
+    "name": "10分間日照時間",
+    "unit": "分"
+  },
+  "sun1h": {
+    "name": "1時間日照時間",
+    "unit": "時間"
+  },
+  "visibility": {
+    "name": "視程",
+    "unit": "m"
+  },
+  "weather": {
+    "name": "現在天気",
+    "unit": null
+  }
+}
