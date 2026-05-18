@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[v0.1.13]アメダス観測一覧</title>
+
+<style>
+body{
+  font-family:sans-serif;
+  margin:0;
+  padding:8px 12px;
+  background:#f5f5f5;
+}
+
+h1{
+  margin:0 0 4px 0;
+  font-size:18px;
+}
+
+#status{
+  margin:0 0 6px 0;
+  font-size:12px;
+}
+
+#toggleSettings{
+  font-size:12px;
+  padding:4px 8px;
+  margin-bottom:6px;
+  cursor:pointer;
+}
+
+#settings{
+  display:none;
+  margin:6px 0 10px 0;
+}
+
+#settings label{
+  display:inline-block;
+  font-size:12px;
+  margin-right:8px;
+}
+
+/* ===== テーブル ===== */
+.table-wrap{
+  overflow:auto;
+  background:#fff;
+  border-radius:10px;
+  max-height:calc(100vh - 150px);
+}
+
+table{
+  border-collapse:collapse;
+  width:100%;
+  min-width:1400px;
+}
+
+th,td{
+  border:1px solid #ddd;
+  padding:4px 6px;
+  text-align:center;
+  white-space:nowrap;
+  font-size:12px;
+}
+
+thead th{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background:#222;
+  color:#fff;
+}
+
+tr:nth-child(even){
+  background:#fafafa;
+}
+
+/* 地点 */
+.station-name{
+  font-weight:bold;
+  font-size:13px;
+  line-height:1.1;
+}
+
+.station-code{
+  font-size:10px;
+  color:#666;
+  margin-top:1px;
+  line-height:1;
+}
+
+/* ヘッダー */
+.th-name{
+  font-weight:bold;
+}
+
+.th-unit{
+  font-size:11px;
+  color:#bbb;
+  margin-top:1px;
+  line-height:1;
+}
+
+.station-cell{
+  text-align:left;
+}
+
+/* ===== 検索 ===== */
+#search-wrap{
+  margin-bottom:6px;
+  display:flex;
+  gap:6px;
+  align-items:center;
+}
+#search-input{
+  flex:1;
+  font-size:13px;
+  padding:5px 8px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  outline:none;
+  max-width:400px;
+}
+#search-input:focus{ border-color:#555; }
+#search-count{ font-size:12px; color:#666; white-space:nowrap; }
+</style>
+</head>
+
+<body>
+
+<h1>アメダス観測一覧</h1>
+<div id="status">読み込み中...</div>
+
+<button id="toggleSettings">▼ 設定</button>
+<div id="settings"></div>
+
+<div id="search-wrap">
+  <input id="search-input" type="search" placeholder="検索（地点名・県・観測番号など）">
+  <span id="search-count"></span>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr id="thead-row">
+  <th>地点</th>
+</tr>
+</thead>
+<tbody id="tbody"></tbody>
+</table>
+</div>
+
+<script>
+
+// =====================
+// 表示項目
+// =====================
+const elements = {
+  temp:{name:"気温",unit:"℃"},
+  humidity:{name:"湿度",unit:"%"},
+  pressure:{name:"現地気圧",unit:"hPa"},
+  normalPressure:{name:"海面更正気圧",unit:"hPa"},
+  wind:{name:"平均風速",unit:"m/s"},
+  windDirection:{name:"風向",unit:null},
+  precipitation10m:{name:"10分降水量",unit:"mm/10min"},
+  precipitation1h:{name:"1時間降水量",unit:"mm/h"},
+  precipitation3h:{name:"3時間降水量",unit:"mm/3h"},
+  precipitation24h:{name:"24時間降水量",unit:"mm/24h"},
+  snow:{name:"積雪深",unit:"cm"},
+  snow1h:{name:"1時間降雪量",unit:"cm/h"},
+  snow6h:{name:"6時間降雪量",unit:"cm/6h"},
+  snow12h:{name:"12時間降雪量",unit:"cm/12h"},
+  snow24h:{name:"24時間降雪量",unit:"cm/24h"},
+  sun10m:{name:"10分日照",unit:"分"},
+  sun1h:{name:"1時間日照",unit:"時間"},
+  visibility:{name:"視程",unit:"m"},
+  weather:{name:"現在天気",unit:null}
+};
+
+// 風向
+const windDirectionMap = {
+  0:"静穏",1:"北北東",2:"北東",3:"東北東",4:"東",5:"東南東",
+  6:"南東",7:"南南東",8:"南",9:"南南西",10:"南西",11:"西南西",
+  12:"西",13:"西北西",14:"北西",15:"北北西",16:"北"
+};
+
+// 都道府県対応テーブル
+const prefMap = {
+  "11":"北海道", "12":"北海道", "13":"北海道", "14":"北海道",
+  "15":"北海道", "16":"北海道", "17":"北海道", "18":"北海道",
+  "19":"北海道", "20":"北海道", "21":"北海道", "22":"北海道",
+  "23":"北海道", "24":"北海道",
+  "31":"青森県", "32":"秋田県", "33":"岩手県", "34":"宮城県", "35":"山形県", "36":"福島県",
+  "40":"茨城県", "41":"栃木県", "42":"群馬県", "43":"埼玉県", "44":"東京都", "45":"千葉県", "46":"神奈川県",
+  "48":"長野県", "49":"山梨県", "50":"静岡県", "51":"愛知県", "52":"岐阜県", "53":"三重県",
+  "54":"新潟県", "55":"富山県", "56":"石川県", "57":"福井県",
+  "60":"滋賀県", "61":"京都府", "62":"大阪府", "63":"兵庫県", "64":"奈良県", "65":"和歌山県",
+  "66":"岡山県", "67":"広島県", "68":"島根県", "69":"鳥取県",
+  "71":"徳島県", "72":"香川県", "73":"愛媛県", "74":"高知県",
+  "81":"山口県", "82":"福岡県", "83":"大分県",
+  "84":"長崎県", "85":"佐賀県", "86":"熊本県",
+  "87":"宮崎県", "88":"鹿児島県",
+  "91":"沖縄県", "92":"沖縄県", "93":"沖縄県", "94":"沖縄県"
+};
+
+function prefName(code) {
+  const pc = String(code).substring(0, 2);
+  return prefMap[pc] || "";
+}
+
+// 全角数字→半角数字
+function toHalfNum(s){
+  return s.replace(/[０-９]/g, c => String.fromCharCode(c.charCodeAt(0)-0xFEE0));
+}
+
+// ひらがな→カタカナ
+function toKatakana(s){
+  return s.replace(/[\u3041-\u3096]/g, c => String.fromCharCode(c.charCodeAt(0)+0x60));
+}
+
+// カタカナ→ひらがな
+function toHiragana(s){
+  return s.replace(/[\u30A1-\u30F6]/g, c => String.fromCharCode(c.charCodeAt(0)-0x60));
+}
+
+// ひらがな→ヘボン式ローマ字
+function toRomaji(hira){
+  const table = [
+    ["うぁ","wa"],["うぃ","wi"],["うぇ","we"],["うぉ","wo"],
+    ["きゃ","kya"],["きゅ","kyu"],["きょ","kyo"],
+    ["しゃ","sha"],["しゅ","shu"],["しょ","sho"],["し","shi"],
+    ["ちゃ","cha"],["ちゅ","chu"],["ちょ","cho"],["ち","chi"],
+    ["つぁ","tsa"],["つぃ","tsi"],["つぇ","tse"],["つぉ","tso"],["つ","tsu"],
+    ["にゃ","nya"],["にゅ","nyu"],["にょ","nyo"],
+    ["ひゃ","hya"],["ひゅ","hyu"],["ひょ","hyo"],
+    ["みゃ","mya"],["みゅ","myu"],["みょ","myo"],
+    ["りゃ","rya"],["りゅ","ryu"],["りょ","ryo"],
+    ["ぎゃ","gya"],["ぎゅ","gyu"],["ぎょ","gyo"],
+    ["じゃ","ja"],["じゅ","ju"],["じょ","jo"],["じ","ji"],
+    ["ぢゃ","ja"],["ぢゅ","ju"],["ぢょ","jo"],["ぢ","ji"],
+    ["びゃ","bya"],["びゅ","byu"],["びょ","byo"],
+    ["ぴゃ","pya"],["ぴゅ","pyu"],["ぴょ","pyo"],
+    ["ふぁ","fa"],["ふぃ","fi"],["ふぇ","fe"],["ふぉ","fo"],["ふ","fu"],
+    ["ゔぁ","va"],["ゔぃ","vi"],["ゔぇ","ve"],["ゔぉ","vo"],["ゔ","vu"],
+    ["てぃ","ti"],["でぃ","di"],["でゅ","dyu"],
+    ["っか","kka"],["っき","kki"],["っく","kku"],["っけ","kke"],["っこ","kko"],
+    ["っさ","ssa"],["っし","sshi"],["っす","ssu"],["っせ","sse"],["っそ","sso"],
+    ["った","tta"],["っち","cchi"],["っつ","ttsu"],["って","tte"],["っと","tto"],
+    ["っな","nna"],["っに","nni"],["っぬ","nnu"],["っね","nne"],["っの","nno"],
+    ["っは","hha"],["っひ","hhi"],["っふ","ffu"],["っへ","hhe"],["っほ","hho"],
+    ["っま","mma"],["っみ","mmi"],["っむ","mmu"],["っめ","mme"],["っも","mmo"],
+    ["っや","yya"],["っゆ","yyu"],["っよ","yyo"],
+    ["っら","rra"],["っり","rri"],["っる","rru"],["っれ","rre"],["っろ","rro"],
+    ["っわ","wwa"],["っを","wwo"],["っ","t"],
+    ["んあ","n'a"],["んい","n'i"],["んう","n'u"],["んえ","n'e"],["んお","n'o"],["ん","n"],
+    ["あ","a"],["い","i"],["う","u"],["え","e"],["お","o"],
+    ["か","ka"],["き","ki"],["く","ku"],["け","ke"],["こ","ko"],
+    ["さ","sa"],["す","su"],["せ","se"],["そ","so"],
+    ["た","ta"],["て","te"],["と","to"],
+    ["な","na"],["に","ni"],["ぬ","nu"],["ね","ne"],["の","no"],
+    ["は","ha"],["ひ","hi"],["へ","he"],["ほ","ho"],
+    ["ま","ma"],["み","mi"],["む","mu"],["め","me"],["も","mo"],
+    ["や","ya"],["ゆ","yu"],["よ","yo"],
+    ["ら","ra"],["り","ri"],["る","ru"],["れ","re"],["ろ","ro"],
+    ["わ","wa"],["を","wo"],
+    ["が","ga"],["ぎ","gi"],["ぐ","gu"],["げ","ge"],["ご","go"],
+    ["ざ","za"],["ず","zu"],["ぜ","ze"],["ぞ","zo"],
+    ["だ","da"],["づ","zu"],["で","de"],["ど","do"],
+    ["ば","ba"],["び","bi"],["ぶ","bu"],["べ","be"],["ぼ","bo"],
+    ["ぱ","pa"],["ぴ","pi"],["ぷ","pu"],["ぺ","pe"],["ぽ","po"],
+    ["ぁ","a"],["ぃ","i"],["ぅ","u"],["ぇ","e"],["ぉ","o"],
+    ["ゃ","ya"],["ゅ","yu"],["ょ","yo"],
+    ["ー",""],["、",""],["。",""],["・",""],
+  ];
+  let result = hira;
+  for(const [k,v] of table){
+    result = result.replaceAll(k,v);
+  }
+  return result;
+}
+
+// =====================
+// 検索クエリに一致するか判定
+// =====================
+function matchStation(code, st, query){
+  if(!query) return true;
+
+  const q = toHalfNum(query.trim().toLowerCase());
+  if(!q) return true;
+
+  // クエリのひらがな・カタカナ両方を用意
+  const qHira = toHiragana(q);
+  const qKata = toKatakana(q);
+
+  function hit(target){
+    const t = (target||"").toLowerCase();
+    return t.includes(q) || t.includes(qHira) || t.includes(qKata);
+  }
+
+  // 観測番号（全角半角対応）
+  if(String(code).includes(q)) return true;
+
+  // 地点名（漢字・ひらがな・カタカナ）
+  if(hit(st.name)) return true;
+
+  // 都道府県名にヒット
+  const pn = prefName(code);
+  if (pn.toLowerCase().includes(q) || pn.toLowerCase().includes(qHira) || pn.toLowerCase().includes(qKata)) return true;
+
+  return false;
+}
+
+// =====================
+// 検索UI
+// =====================
+let searchQuery = "";
+
+document.getElementById("search-input").addEventListener("input", e => {
+  searchQuery = e.target.value;
+  if(Object.keys(stationsCache).length === 0) return;
+  buildTable(stationsCache, amedasCache);
+});
+
+
+let state = {};
+let stationsCache = {};
+let amedasCache = {};
+
+// =====================
+// 設定UI
+// =====================
+const settings = document.getElementById("settings");
+const toggleSettings = document.getElementById("toggleSettings");
+
+toggleSettings.onclick = () => {
+  const open = settings.style.display === "block";
+  settings.style.display = open ? "none" : "block";
+  toggleSettings.textContent = open ? "▼ 設定" : "▲ 設定";
+};
+
+function buildControls(){
+  for(const key in elements){
+
+    state[key] = true;
+
+    const label = document.createElement("label");
+
+    const cb = document.createElement("input");
+    cb.type = "checkbox";
+    cb.checked = true;
+
+    cb.onchange = () => {
+      state[key] = cb.checked;
+      buildHeader();
+      buildTable(stationsCache, amedasCache);
+    };
+
+    label.appendChild(cb);
+    label.appendChild(document.createTextNode(elements[key].name));
+
+    settings.appendChild(label);
+  }
+}
+
+// =====================
+// 値取得
+// =====================
+function getValue(obj,key){
+
+  if(!obj || !(key in obj)) return "--";
+
+  const v = obj[key][0];
+  if(v === null || v === undefined) return "--";
+
+  if(key === "windDirection"){
+    return windDirectionMap[v] ?? v;
+  }
+
+  return v;
+}
+
+// =====================
+// ヘッダー
+// =====================
+function buildHeader(){
+
+  const tr = document.getElementById("thead-row");
+
+  tr.innerHTML = "<th>地点</th>"; // ★これ必須
+  
+  for(const k in elements){
+
+    if(!state[k]) continue;
+    if(k === "windDirection") continue; // 風速のセルに含める場合はスキップ
+
+    const th = document.createElement("th");
+    const e = elements[k];
+
+    th.innerHTML = `
+      <div class="th-name">${e.name}</div>
+      ${e.unit ? `<div class="th-unit">${e.unit}</div>` : ``}
+    `;
+
+    tr.appendChild(th);
+  }
+}
+
+// =====================
+// fetch stations
+// =====================
+async function fetchStations(){
+  const res = await fetch("./points.json");
+  return await res.json();
+}
+
+// =====================
+// fetch amedas
+// =====================
+async function fetchAmedas(){
+
+  let date = new Date();
+  date.setSeconds(0);
+  date.setMilliseconds(0);
+  date.setMinutes(Math.floor(date.getMinutes()/10)*10);
+
+  for(let i=0;i<20;i++){
+
+    const t = getTimeString(date);
+    const url = `https://www.jma.go.jp/bosai/amedas/data/map/${t}.json`;
+
+    try{
+      const res = await fetch(url);
+      if(!res.ok) throw new Error();
+      const data = await res.json();
+
+      document.getElementById("status").textContent =
+        `データ時刻: ${t}`;
+
+      return data;
+
+    }catch(e){
+      date.setMinutes(date.getMinutes()-10);
+    }
+  }
+
+  document.getElementById("status").textContent = "データ取得失敗（時間をおいて再読み込みしてください）";
+  throw new Error("取得失敗");
+}
+
+// =====================
+// 時刻
+// =====================
+function getTimeString(date){
+  // JSTに変換（UTC+9）してフォーマット
+  const jst = new Date(date.getTime() + 9 * 60 * 60 * 1000);
+  return (
+    String(jst.getUTCFullYear()) +
+    String(jst.getUTCMonth()+1).padStart(2,"0") +
+    String(jst.getUTCDate()).padStart(2,"0") +
+    String(jst.getUTCHours()).padStart(2,"0") +
+    String(jst.getUTCMinutes()).padStart(2,"0") +
+    "00"
+  );
+}
+
+// =====================
+// 表生成
+// =====================
+function buildTable(stations, amedas){
+
+  stationsCache = stations;
+  amedasCache = amedas;
+
+  const tbody = document.getElementById("tbody");
+  tbody.innerHTML = "";
+
+  let count = 0;
+  const total = Object.keys(stations).length;
+
+  for(const code in stations){
+
+    const st = stations[code];
+
+    if(!matchStation(code, st, searchQuery)) continue;
+
+    count++;
+    const d = amedas[code];
+
+    const tr = document.createElement("tr");
+
+    const td0 = document.createElement("td");
+    td0.className = "station-cell";
+
+    const nameDiv = document.createElement("div");
+    nameDiv.className = "station-name";
+    nameDiv.textContent = `${prefName(code)} ${st.name}`; // 都道府県名を再表示
+
+    const codeDiv = document.createElement("div");
+    codeDiv.className = "station-code";
+    codeDiv.textContent = code;
+
+    td0.appendChild(nameDiv);
+    td0.appendChild(codeDiv);
+    tr.appendChild(td0);
+
+    for(const k in elements){
+
+      if(!state[k]) continue;
+      if(k === "windDirection") continue; // 風速のセルに含める場合はスキップ
+
+      const td = document.createElement("td");
+      let val = getValue(d, k);
+      
+      if (k === "wind") {
+        const dir = getValue(d, "windDirection");
+        td.innerHTML = `<div>${val} m/s</div><div style="font-size:10px; color:#666;">${dir}</div>`;
+      } else {
+        td.textContent = val;
+      }
+      tr.appendChild(td);
+    }
+
+    tbody.appendChild(tr);
+  }
+
+  document.getElementById("search-count").textContent =
+    searchQuery ? `${count} / ${total} 件` : `${total} 件`;
+}
+
+// =====================
+// 起動
+// =====================
+(async () => {
+
+  try{
+    const stations = await fetchStations();
+
+    buildControls(); // stateを先に初期化してからヘッダーを生成
+    buildHeader();
+
+    const amedas = await fetchAmedas();
+
+    buildTable(stations, amedas);
+
+  }catch(e){
+    document.getElementById("status").textContent =
+      `エラー: ${e.message}`;
+  }
+
+})();
+
+</script>
+
+</body>
+</html>
