@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>緊急地震速報表示システム (GitHub Pages版)</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #00FF00; font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; }
+        #container { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        
+        /* Web Component: eew-banner */
+        eew-banner {
+            display: flex;
+            width: 1200px;
+            height: 300px;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+            animation: slideIn 0.5s ease-out;
+            border: 4px solid #fff;
+            box-sizing: border-box;
+        }
+
+        @keyframes slideIn { from { transform: translateX(-100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+        @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        // Web Component: EEWBanner
+        class EEWBanner extends HTMLElement {
+            constructor() {
+                super();
+                this.attachShadow({ mode: 'open' });
+            }
+
+            connectedCallback() {
+                const eew = JSON.parse(this.getAttribute('data'));
+                this.render(eew);
+            }
+
+            render(eew) {
+                const isTest = eew.type === 'test_eew';
+                this.shadowRoot.innerHTML = `
+                    <style>
+                        :host { display: flex; width: 100%; height: 100%; background: #001a33; color: white; overflow: hidden; }
+                        .map-container { width: 400px; height: 100%; background: #001a33; position: relative; border-right: 2px solid #fff; }
+                        .content { flex: 1; display: flex; flex-direction: column; }
+                        .header { height: 80px; background: #c00; display: flex; align-items: center; padding: 0 20px; font-size: 32px; font-weight: bold; border-bottom: 2px solid #fff; position: relative; }
+                        .test-label { position: absolute; right: 20px; color: #ff0; font-size: 24px; }
+                        .body { flex: 1; padding: 20px; display: flex; flex-direction: column; justify-content: center; background: #003366; }
+                        .epicenter { font-size: 36px; color: #ff0; font-weight: bold; margin-bottom: 10px; }
+                        .warning { font-size: 28px; margin-bottom: 10px; }
+                        .areas { font-size: 24px; opacity: 0.9; line-height: 1.4; }
+                        #map { width: 100%; height: 100%; }
+                        .leaflet-container { background: #001a33 !important; }
+                    </style>
+                    <div class="map-container"><div id="map"></div></div>
+                    <div class="content">
+                        <div class="header">
+                            緊急地震速報（気象庁）
+                            ${isTest ? '<span class="test-label">【テスト報】</span>' : ''}
+                        </div>
+                        <div class="body">
+                            <div class="epicenter">${eew.epicenter}で地震</div>
+                            <div class="warning">${eew.warning || '強い揺れに警戒'}</div>
+                            <div class="areas">${(eew.areas || []).join(' ')}</div>
+                        </div>
+                    </div>
+                    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+                `;
+
+                this.initMap(eew);
+            }
+
+            async initMap(eew) {
+                const mapEl = this.shadowRoot.getElementById('map');
+                const map = L.map(mapEl, { zoomControl: false, attributionControl: false }).setView([38, 138], 5);
+                
+                // 同梱の地図データの読み込み
+                if (!window._geojsonData) {
+                    const res = await fetch('./prefectures.json');
+                    window._geojsonData = await res.json();
+                }
+
+                const targetAreas = new Set((eew.areas || []).map(a => a.replace(/(都|道|府|県)$/, '')));
+                const geoLayer = L.geoJSON(window._geojsonData, {
+                    style: (feature) => {
+                        const rawName = feature.properties.name || feature.properties.P || '';
+                        const prefName = rawName.replace(/(都|道|府|県)$/, '');
+                        const isTarget = targetAreas.has(prefName);
+                        return {
+                            fillColor: isTarget ? '#ffff00' : '#001a33',
+                            weight: 1, opacity: 1, color: '#ffffff', fillOpacity: 1
+                        };
+                    }
+                }).addTo(map);
+
+                const bounds = L.latLngBounds();
+                let hasTarget = false;
+                geoLayer.eachLayer(layer => {
+                    const rawName = layer.feature.properties.name || layer.feature.properties.P || '';
+                    const prefName = rawName.replace(/(都|道|府|県)$/, '');
+                    if (targetAreas.has(prefName)) {
+                        if (layer.getBounds) { bounds.extend(layer.getBounds()); hasTarget = true; }
+                    }
+                });
+
+                if (eew.lat && eew.lon) {
+                    bounds.extend([eew.lat, eew.lon]);
+                    const xIcon = L.divIcon({
+                        className: 'epicenter-x',
+                        html: '<div style="color:red;font-size:40px;font-weight:bold;transform:translate(-50%,-50%);text-shadow:0 0 5px white;">×</div>',
+                        iconSize: [0, 0]
+                    });
+                    L.marker([eew.lat, eew.lon], { icon: xIcon }).addTo(map);
+                    hasTarget = true;
+                }
+
+                if (hasTarget) {
+                    map.fitBounds(bounds, { padding: [20, 20], maxZoom: 8 });
+                }
+            }
+        }
+        customElements.define('eew-banner', EEWBanner);
+
+        // P2P地震情報APIポーリング
+        let lastEventId = null;
+        async function pollP2P() {
+            try {
+                const res = await fetch('https://api.p2pquake.net/v2/history?codes=551&limit=1');
+                const data = await res.json();
+                if (data.length > 0) {
+                    const eew = data[0];
+                    if (eew.id !== lastEventId) {
+                        lastEventId = eew.id;
+                        if (eew.earthquake) {
+                            showEEW({
+                                id: eew.id,
+                                epicenter: eew.earthquake.hypocenter.name,
+                                lat: eew.earthquake.hypocenter.latitude,
+                                lon: eew.earthquake.hypocenter.longitude,
+                                areas: eew.areas.map(a => a.name),
+                                warning: "強い揺れに警戒"
+                            });
+                        }
+                    }
+                }
+            } catch (e) { console.error("P2P Poll Error:", e); }
+        }
+        setInterval(pollP2P, 10000);
+        pollP2P();
+
+        // GAS連携 (外部信号受信)
+        // GASのウェブアプリURLを設定することで、外部からのテスト報を受信可能にします
+        let gasUrl = new URLSearchParams(window.location.search).get('gas');
+        async function pollGAS() {
+            if (!gasUrl) return;
+            try {
+                const res = await fetch(gasUrl);
+                const data = await res.json();
+                if (data && data.id !== lastEventId) {
+                    lastEventId = data.id;
+                    showEEW(data);
+                }
+            } catch (e) { console.error("GAS Poll Error:", e); }
+        }
+        if (gasUrl) setInterval(pollGAS, 5000);
+
+        // BroadcastChannel連携 (管理画面からのテスト報受信)
+        const bc = new BroadcastChannel('eew_channel');
+        bc.onmessage = (ev) => {
+            if (ev.data.type === 'test_eew') showEEW(ev.data);
+            if (ev.data.type === 'clear') document.getElementById('container').innerHTML = '';
+        };
+
+        function showEEW(data) {
+            const container = document.getElementById('container');
+            const el = document.createElement('eew-banner');
+            el.setAttribute('data', JSON.stringify(data));
+            container.prepend(el);
+            
+            // 1分後に自動消去（本番報の場合）
+            if (data.type !== 'test_eew') {
+                setTimeout(() => el.style.animation = 'fadeOut 1s forwards', 60000);
+                setTimeout(() => el.remove(), 61000);
+            }
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') document.getElementById('container').innerHTML = '';
+        });
+    </script>
+</body>
+</html>
